@@ -819,7 +819,7 @@ body {
     padding-top: 233px;
     padding-bottom: 145px;
     background-color: #333333;
-    z-index: -7;
+    z-index: 0;
 }
 
 .hero__wrap {
@@ -858,6 +858,7 @@ body {
     font-size: 18px;
     line-height: 25px;
     text-align: center;
+    cursor: pointer;
     color: #FFFFFF;
 }
 
@@ -915,6 +916,10 @@ body {
 
 .slide-3 {
     background-image: url(../img/hero/hero__bg3-1920.jpg);
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #666;
 }
 
 
@@ -1319,6 +1324,10 @@ body {
 
 .graph-modal__content {
     display: flex;
+}
+
+.graph-modal__close {
+    outline: none;
 }
 
 .graph-modal__descr {

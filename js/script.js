@@ -115,9 +115,9 @@ const heroSwiper = new Swiper('.hero__swiper-container', {
   allowTouchMove: false,
   loop: true,
   effect: 'fade',
-  speed: 5000,
+  speed: 6000,
   autoplay: {
-    delay: 10000
+    delay: 2000
   }
 });
 
@@ -387,7 +387,7 @@ function init() {
     {},
     {
       iconLayout: "default#image",
-      iconImageHref: "placemark.svg",
+      iconImageHref: "img/placemark.svg",
       iconImageSize: [20, 20],
       iconImageOffset: [-20, -40],
     }
@@ -411,11 +411,6 @@ validation
     {
       rule: 'required',
       errorMessage: 'Как вас зовут?',
-    },
-    {
-      rule: 'customRegexp',
-      value: /^[A-Za-z-Яа-яЁё]+$/,
-      errorMessage: 'Недопустимый формат',
     },
     {
       rule: 'minLength',
@@ -446,13 +441,12 @@ validation
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
     })
-      .then(() => {
-        closeFormModal();
-        setTimeout(openSuccessModal, 700);
-        setTimeout(closeSuccessModal, 3000);
-      })
       .catch((error) => console.log('Sending form failed'));
-})
+
+      
+            e.target.reset(); 
+        
+});
   
 
 

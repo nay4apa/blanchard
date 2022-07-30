@@ -29,7 +29,7 @@
 
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1210px) {
 
     .container {
         max-width: 1025px;
@@ -291,6 +291,10 @@
     .swiper-pagination-bullet {
         width: 10px;
         height: 10px;
+    }
+
+    .events__swiper-button {
+        display: none;
     }
 
     .events__swiper-slide:nth-child(4) .events__article-titl {
@@ -855,10 +859,6 @@ line-height: 32px;
         margin-bottom: 14px;
         font-size: 28px;
         line-height: 38px;
-    }
-
-    .events__swiper-button {
-        display: none;
     }
 
     .events__article-wrap {
