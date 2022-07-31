@@ -11,14 +11,14 @@ menuBtn.addEventListener('click', function () {
   body.classList.toggle('overflow--lock');
   html.classList.toggle('overflow--lock');
 
-link.forEach(el => {
-  el.addEventListener('click', () => {
-    body.classList.remove('overflow--lock')
-    html.classList.remove('overflow--lock')
-    menuBtn.classList.remove('header__burger-active')
-    menu.classList.remove('header__burger-menu-active')
+  link.forEach(el => {
+    el.addEventListener('click', () => {
+      body.classList.remove('overflow--lock')
+      html.classList.remove('overflow--lock')
+      menuBtn.classList.remove('header__burger-active')
+      menu.classList.remove('header__burger-menu-active')
+    })
   })
-})
 });
 
 /*search*/
@@ -171,13 +171,13 @@ var swiper = new Swiper('.gallery__swiper', {
   },
 
   a11y: false,
-    keyboard: {
-      enabled: true,
-      onlyInViewport: true
-    },
-    watchSlidesProgress: true,
-    watchSlidesVisibility: true,
-    slideVisibleClass: "slide-visible",
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true
+  },
+  watchSlidesProgress: true,
+  watchSlidesVisibility: true,
+  slideVisibleClass: "slide-visible",
 
 });
 
@@ -432,22 +432,21 @@ validation
 
   ])
 
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    const formData = new FormData(form);
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const formData = new FormData(form);
 
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .catch((error) => console.log('Sending form failed'));
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .catch((error) => console.log('Sending form failed'));
 
-      
-            e.target.reset(); 
-        
+  e.target.reset();
+
 });
-  
+
 
 
 
