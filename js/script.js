@@ -249,7 +249,7 @@ const eventsSwiper = new Swiper('.events__swiper-container', {
       slidesPerGroup: 1
     },
 
-    571: {
+    650: {
       slidesPerView: 2,
       slidesPerGroup: 1,
       spaceBetween: 30
@@ -428,6 +428,11 @@ validation
     {
       rule: 'required',
       errorMessage: 'Укажите ваш телефон',
+    },
+    {
+      rule: 'minLength',
+      value: 11,
+      errorMessage: 'Неверный формат',
     },
 
   ])

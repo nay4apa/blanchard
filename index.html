@@ -15,42 +15,53 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+  <script src="js/inputmask.min.js"></script>
+  <script src="js/graph-modal.min.js"></script>
+  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+  <script src="js/accordion.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+  <script src="js/choices.min.js"></script>
+
+
 </head>
 
-<body>
+<body class="body">
   <!-- header -->
   <header class="header">
     <div class="header__top  ">
       <div class="header__container container flex">
         <div class="header__wrap">
-          <button class="header__burger  btn" id="burger">
+          <button class="header__burger  btn" id="burger" aria-label="Открытие и закрытие меню">
             <span class="header__burger-line"></span>
             <span class="header__burger-line"></span>
             <span class="header__burger-line"></span>
           </button>
           <div class="header__burger-menu">
-            <ul class="header__burger-list">
+            <ul class="header__burger-list list-reset" aria-label="навигация по сайту">
               <li class="header__burger-item">
-                <a href="#about" class="header__burger-link">О нас</a>
+                <a href="#about" class="header__burger-link link-reset" aria-label="О нас">О нас</a>
               </li>
               <li class="header__burger-item">
-                <a href="#gallery" class="header__burger-link">Галерея</a>
+                <a href="#gallery" class="header__burger-link link-reset" aria-label="Галерея">Галерея</a>
               </li>
               <li class="header__burger-item">
-                <a href="#catalog" class="header__burger-link">Каталог</a>
+                <a href="#catalog" class="header__burger-link link-reset" aria-label="Каталог">Каталог</a>
               </li>
               <li class="header__burger-item">
-                <a href="#events" class="header__burger-link">События</a>
+                <a href="#events" class="header__burger-link link-reset" aria-label="События">События</a>
               </li>
               <li class="header__burger-item">
-                <a href="#projects" class="header__burger-link">Проекты</a>
+                <a href="#projects" class="header__burger-link link-reset" aria-label="Проекты">Проекты</a>
               </li>
               <li class="header__burger-item">
-                <a href="#contacts" class="header__burger-link">Контакты</a>
+                <a href="#contacts" class="header__burger-link link-reset" aria-label="Контакты">Контакты</a>
               </li>
             </ul>
 
-            <a href="" class="header__burger-account">
+            <a href="" class="header__burger-account link-reset" aria-label="Войти в аккаунт">
               <svg class="header__account-img" width="13" height="13" viewbox="0 0 13 13" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -65,37 +76,37 @@
 
           </div>
 
-          <a class="header__logo-link">
+          <a class="header__logo-link link-reset" aria-label="Логотип Blanchard">
             <picture class="header__logo">
               <source srcset="img/logo-320.svg" media="(max-width: 570px)">
               <source srcset="img/logo-1024.svg" media="(max-width: 1199px)">
-              <img src="img/logo-1920.svg" alt="Blanchard. Художественная галерея.">
+              <img class="img" src="img/logo-1920.svg" alt="Blanchard. Художественная галерея.">
             </picture>
           </a>
           <nav class="header__nav ">
-            <ul class="header__list">
+            <ul class="header__list list-reset">
               <li class="header__item">
-                <a href="#about" class="header__link">О нас</a>
+                <a href="#about" class="header__link link-reset" aria-label="О нас">О нас</a>
               </li>
               <li class="header__item">
-                <a href="#gallery" class="header__link">Галерея</a>
+                <a href="#gallery" class="header__link link-reset" aria-label="Галерея">Галерея</a>
               </li>
               <li class="header__item">
-                <a href="#catalog" class="header__link">Каталог</a>
+                <a href="#catalog" class="header__link link-reset" aria-label="Каталог">Каталог</a>
               </li>
               <li class="header__item">
-                <a href="#events" class="header__link">События</a>
+                <a href="#events" class="header__link link-reset" aria-label="События">События</a>
               </li>
               <li class="header__item">
-                <a href="#projects" class="header__link">Проекты</a>
+                <a href="#projects" class="header__link link-reset" aria-label="Проекты">Проекты</a>
               </li>
               <li class="header__item">
-                <a href="#contacts" class="header__link">Контакты</a>
+                <a href="#contacts" class="header__link link-reset" aria-label="Контакты">Контакты</a>
               </li>
 
             </ul>
           </nav>
-          <button class="header__searth-btn btn" type="button">
+          <button class="header__searth-btn btn" type="button" aria-label="Поиск">
             <svg width="30" height="29" viewbox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="9.15446" height="2.28862"
                 transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58105 21.0461)" fill="white" />
@@ -107,7 +118,7 @@
           </button>
           <div class="header__search-top">
             <form class="header__form" action="https://jsonplaceholder.typicode.com/posts" method="POST">
-              <button class="header__searth-btn  btn">
+              <button class="header__searth-btn  btn" aria-label="Поиск">
                 <svg width="30" height="29" viewbox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="9.15446" height="2.28862"
                     transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58105 21.0461)" fill="white" />
@@ -119,7 +130,7 @@
 
               <input type="text" class="header__searth-input">
 
-              <button class="header__searth-close btn" type="button">
+              <button class="header__searth-close btn" type="button" aria-label="Поиск">
                 <svg width="23" height="23" viewbox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="29.567" height="2.9567"
                     transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.09375 0)" fill="white" />
@@ -131,7 +142,7 @@
           </div>
         </div>
 
-        <a href="" class="header__account">
+        <a href="" class="header__account link-reset" aria-label="Войти в аккаунт">
           <svg class="header__account-img" width="13" height="13" viewbox="0 0 13 13" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path
@@ -147,60 +158,60 @@
     </div>
     <div class="header__bottom ">
       <div class="header__bottom-wrap container flex">
-        <ul class="header__bottom-menu flex">
+        <ul class="header__bottom-menu list-reset flex">
           <li class="header__bottom-item">
-            <button class="header__drop-btn js-header-dropdown-btn btn" data-path="one">
+            <button class="header__drop-btn js-header-dropdown-btn btn" data-path="one" aria-label="Реализм">
               <span class="header__drop-text">Реализм</span>
             </button>
             <div class="header__dropdown js-header-drop" data-target="one">
               <div class="header__dropdown-wrap" data-simplebar>
-                <ul class="header__drop-list reset-list" id="scroll-1">
+                <ul class="header__drop-list list-reset" id="scroll-1">
                   <li class="header__dropdown-item">
-                    <a href="" class="header__item-link Tintoretto">Тинторрето</a>
+                    <a href="" class="header__item-link Tintoretto link-reset" aria-label="Тинторрето">Тинторрето</a>
                   </li>
                   <li class="header__dropdown-item">
-                    <a href="" class="header__item-link Friedrich">Фридрих</a>
+                    <a href="" class="header__item-link Friedrich link-reset" aria-label="Фридрих">Фридрих</a>
                   </li>
                   <li class="header__dropdown-item">
-                    <a href="" class="header__item-link Leonardo">Леонардо</a>
+                    <a href="" class="header__item-link Leonardo link-reset" aria-label="Леонардо">Леонардо</a>
                   </li>
                   <li class="header__dropdown-item">
-                    <a href="" class="header__item-link Verrocchio">Верроккьо</a>
+                    <a href="" class="header__item-link Verrocchio link-reset" aria-label="Верроккьо">Верроккьо</a>
                   </li>
                   <li class="header__dropdown-item">
-                    <a href="" class="header__item-link Friedrich">Фридрих</a>
+                    <a href="" class="header__item-link Friedrich link-reset" aria-label="Фридрих">Фридрих</a>
                   </li>
                   <li class="header__dropdown-item">
-                    <a href="" class="header__item-link Tintoretto">Тинторрето</a>
+                    <a href="" class="header__item-link Tintoretto link-reset" aria-label="Тинторрето">Тинторрето</a>
                   </li>
                 </ul>
               </div>
             </div>
           </li>
           <li class="header__bottom-item">
-            <button class="header__drop-btn js-header-dropdown-btn btn" data-path="two">
+            <button class="header__drop-btn js-header-dropdown-btn btn" data-path="two" aria-label="Импресионизм">
               <span class="header__drop-text">Импрессионизм</span>
             </button>
             <div class="header__dropdown js-header-drop" data-target="two">
               <div class="header__dropdown-wrap" data-simplebar>
-                <ul class="header__drop-list reset-list" id="scroll-2">
+                <ul class="header__drop-list list-reset" id="scroll-2">
                   <li class="header__dropdown-item">
-                    <a href="" class="header__item-link Monet">Моне</a>
+                    <a href="" class="header__item-link Monet link-reset" aria-label="Моне">Моне</a>
                   </li>
                   <li class="header__dropdown-item">
-                    <a href="" class="header__item-link Sisley">Сислей</a>
+                    <a href="" class="header__item-link Sisley link-reset" aria-label="Сислей">Сислей</a>
                   </li>
                   <li class="header__dropdown-item">
-                    <a href="" class="header__item-link Manet">Мане</a>
+                    <a href="" class="header__item-link Manet link-reset" aria-label="Мане">Мане</a>
                   </li>
                   <li class="header__dropdown-item">
-                    <a href="" class="header__item-link Renoir">Ренуар</a>
+                    <a href="" class="header__item-link Renoir link-reset" aria-label="Ренуар">Ренуар</a>
                   </li>
                   <li class="header__dropdown-item">
-                    <a href="" class="header__item-link Sisley">Сислей</a>
+                    <a href="" class="header__item-link Sisley link-reset" aria-label="Сислей">Сислей</a>
                   </li>
                   <li class="header__dropdown-item">
-                    <a href="" class="header__item-link Monet">Мане</a>
+                    <a href="" class="header__item-link Monet link-reset" aria-label="Мане">Мане</a>
                   </li>
                 </ul>
               </div>
@@ -208,75 +219,76 @@
           </li>
 
           <li class="header__bottom-item">
-            <button class="header__drop-btn js-header-dropdown-btn btn" data-path="three">
+            <button class="header__drop-btn js-header-dropdown-btn btn" data-path="three"
+              aria-label="Постимпрессионизм">
               <span class="header__drop-text">Постимпрессионизм</span>
             </button>
             <div class="header__dropdown js-header-drop" data-target="three">
               <div class="header__dropdown-wrap" data-simplebar>
-                <ul class="header__drop-list reset-list" id="scroll-3">
+                <ul class="header__drop-list list-reset" id="scroll-3">
                   <li class="header__dropdown-item">
-                    <a href="" class="header__item-link VanGogh">Ван Гог</a>
+                    <a href="" class="header__item-link VanGogh link-reset" aria-label="Ван Гог">Ван Гог</a>
                   </li>
                   <li class="header__dropdown-item">
-                    <a href="" class="header__item-link fridrih Cezanne">Сезанн</a>
+                    <a href="" class="header__item-link fridrih Cezanne link-reset" aria-label="Сезанн">Сезанн</a>
                   </li>
                   <li class="header__dropdown-item">
-                    <a href="" class="header__item-link Gauguin">Гоген</a>
+                    <a href="" class="header__item-link Gauguin link-reset" aria-label="Гоген">Гоген</a>
                   </li>
                   <li class="header__dropdown-item">
-                    <a href="" class="header__item-link Sulfur">Сёра</a>
+                    <a href="" class="header__item-link Sulfur link-reset" aria-label="Сера">Сёра</a>
                   </li>
                   <li class="header__dropdown-item">
-                    <a href="" class="header__item-link VanGogh">Ван Гог</a>
+                    <a href="" class="header__item-link VanGogh link-reset" aria-label="Ван гог">Ван Гог</a>
                   </li>
                   <li class="header__dropdown-item">
-                    <a href="" class="header__item-link Gauguin">Гоген</a>
+                    <a href="" class="header__item-link Gauguin link-reset" aria-label="Гоген">Гоген</a>
                   </li>
                 </ul>
               </div>
             </div>
           </li>
           <li class="header__bottom-item">
-            <button class="header__drop-btn js-header-dropdown-btn btn" data-path="four">
+            <button class="header__drop-btn js-header-dropdown-btn btn" data-path="four" aria-label="Авангард">
               <span class="header__drop-text">Авангард</span>
             </button>
             <div class="header__dropdown js-header-drop" data-target="four">
               <div class="header__dropdown-wrap" data-simplebar>
-                <ul class="header__drop-list reset-list" id="scroll-4">
+                <ul class="header__drop-list list-reset" id="scroll-4">
                   <li class="header__dropdown-item">
-                    <a href="" class="header__item-link Kandinsky">Кандинский</a>
+                    <a href="" class="header__item-link Kandinsky link-reset" aria-label="Кандинский">Кандинский</a>
                   </li>
                   <li class="header__dropdown-item">
-                    <a href="" class="header__item-link fridrih Marinetti">Маринетти</a>
+                    <a href="" class="header__item-link fridrih Marinetti link-reset" aria-label="Маринетти">Маринетти</a>
                   </li>
                   <li class="header__dropdown-item">
-                    <a href="" class="header__item-link Malevich">Малевич</a>
+                    <a href="" class="header__item-link Malevich link-reset" aria-label="Малевич">Малевич</a>
                   </li>
                   <li class="header__dropdown-item">
-                    <a href="" class="header__item-link Picasso">Пикассо</a>
+                    <a href="" class="header__item-link Picasso link-reset" aria-label="Пикассо">Пикассо</a>
                   </li>
                 </ul>
               </div>
             </div>
           </li>
           <li class="header__bottom-item">
-            <button class="header__drop-btn js-header-dropdown-btn btn" data-path="five">
+            <button class="header__drop-btn js-header-dropdown-btn btn" data-path="five" aria-label="Футуризм">
               <span class="header__drop-text">Футуризм</span>
             </button>
             <div class="header__dropdown js-header-drop" data-target="five">
               <div class="header__dropdown-wrap" data-simplebar>
-                <ul class="header__drop-list reset-list" id="scroll-5">
+                <ul class="header__drop-list list-reset" id="scroll-5">
                   <li class="header__dropdown-item">
-                    <a href="" class="header__item-link Carra">Карра</a>
+                    <a href="" class="header__item-link Carra link-reset" aria-label="Карра">Карра</a>
                   </li>
                   <li class="header__dropdown-item">
-                    <a href="" class="header__item-link fridrih Pratella">Прателла</a>
+                    <a href="" class="header__item-link fridrih Pratella link-reset" aria-label="Прателла">Прателла</a>
                   </li>
                   <li class="header__dropdown-item">
-                    <a href="" class="header__item-link Severini">Северини</a>
+                    <a href="" class="header__item-link Severini link-reset" aria-label="Северини">Северини</a>
                   </li>
                   <li class="header__dropdown-item">
-                    <a href="" class="header__item-link Balla">Балла</a>
+                    <a href="" class="header__item-link Balla link-reset" aria-label="Балла">Балла</a>
                   </li>
 
                 </ul>
@@ -286,7 +298,7 @@
         </ul>
         <div class="header__search">
           <form class="header__form" action="https://jsonplaceholder.typicode.com/posts">
-            <button class="header__searth-btn btn">
+            <button class="header__searth-btn btn" aria-label="поиск">
               <svg width="23" height="22" viewbox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="6.8678" height="1.71695"
                   transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
@@ -313,14 +325,16 @@
     <section class="hero ">
       <div class="hero__container container">
         <div class="hero__wrap">
-          <h1 class="hero__titl">
+          <h1 class="hero__title-official list-reset">Blanchard. Художественная галерея</h1>
+          <h2 class="hero__titl list-reset">
             Прикоснитесь к прекрасному
-          </h1>
-          <p class="hero__text">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий
+          </h2>
+          <p class="list-reset hero__text">Мы вынуждены отталкиваться от того, что реализация намеченных плановых
+            заданий
             создаёт
             предпосылки для новых предложений
           </p>
-          <a href="#map" class="hero__btn btn">
+          <a href="#map" class="hero__btn btn link-reset" aria-label="Подписаться на рассылку">
             Подписаться на рассылку
           </a>
         </div>
@@ -342,8 +356,8 @@
 
     <section class="about-us" id="about">
       <div class="container">
-        <h2 class="about-us__titl">О нас</h2>
-        <p class="about-us__text">
+        <h2 class="about-us__titl list-reset">О нас</h2>
+        <p class="list-reset about-us__text">
           Ясность нашей позиции очевидна: семантический разбор внешних противодействий
           однозначно определяет каждого участника как способного принимать собственные решения касаемо
           распределения
@@ -367,24 +381,24 @@
     <section class="gallery" id="gallery">
       <div class="gallery__container container ">
         <div class="gallery__left flex">
-          <h2 class="gallery__titl">Галерея</h2>
+          <h2 class="gallery__titl list-reset">Галерея</h2>
           <span class="gallery__select-name">Фильтр:</span>
-          <select class="gallery__select" name="gallerySelect" id="selectCustom">
+          <select class="gallery__select" name="gallerySelect" id="selectCustom" aria-label="Выбрать фильтр">
             <option class="gallery__select-option is-selected" value="Живопись" selected>Живопись</option>
             <option class="gallery__select-option" value="Рисунок">Рисунок</option>
             <option class="gallery__select-option" value="Скульптура">Скульптура</option>
           </select>
-          <label class="gallery__checkbox-label">
+          <label class="gallery__checkbox-label" aria-label="выбрать период">
             <input class="gallery__checkbox-hiden" type="checkbox">
             <span class="gallery__checkbox-visible"></span>
             <span class="gallery__checkbox-name">XIX век</span>
           </label>
-          <label class="gallery__checkbox-label">
+          <label class="gallery__checkbox-label" aria-label="выбрать период">
             <input class="gallery__checkbox-hiden" type="checkbox">
             <span class="gallery__checkbox-visible"></span>
             <span class="gallery__checkbox-name">XX век</span>
           </label>
-          <label class="gallery__checkbox-label">
+          <label class="gallery__checkbox-label" aria-label="выбрать период">
             <input class="gallery__checkbox-hiden" type="checkbox">
             <span class="gallery__checkbox-visible"></span>
             <span class="gallery__checkbox-name">Современность</span>
@@ -394,7 +408,7 @@
         <div class="gallery__right">
           <div class="gallery__slider">
             <div class="gallery__slider-navigation">
-              <div class="gallery__swiper-button-prev gallery__swiper-btn">
+              <button class="gallery__swiper-button-prev gallery__swiper-btn btn" aria-label="Предыдущий слайд">
                 <svg width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path class="fond"
                     d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z"
@@ -404,9 +418,9 @@
                     stroke="#666666" />
                   <path class="arrow" d="M14 20L19 15L14 10" stroke="white" />
                 </svg>
-              </div>
-              <div class="gallery__swiper-pagination swiper-pagination"></div>
-              <div class="gallery__swiper-button-next gallery__swiper-btn">
+              </button>
+              <div class="gallery__swiper-pagination swiper-pagination "></div>
+              <button class="gallery__swiper-button-next gallery__swiper-btn btn" aria-label="Следующий слайд">
                 <svg width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path class="fond"
                     d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z"
@@ -416,56 +430,56 @@
                     stroke="#666666" />
                   <path class="arrow" d="M14 20L19 15L14 10" stroke="white" />
                 </svg>
-              </div>
+              </button>
             </div>
             <div class="gallery__swiper swiper">
               <div class="gallery__swiper-wrapper swiper-wrapper">
-                <a class="gallery__swiper-slide swiper-slide" data-graph-path="slide1">
+                <a class="gallery__swiper-slide swiper-slide link-reset" data-graph-path="slide1" aria-label="первый слайд">
                   <picture class="gallery__slide ">
                     <source media="(max-width: 570px)" srcset="img/gallery/gallery__slider-1(320).jpg">
                     <source media="(max-width: 991px)" srcset="img/gallery/gallery__slider-1(768).jpg">
                     <source media="(max-width: 1199px)" srcset="img/gallery/gallery__slider-1(1024).jpg">
-                    <img src="img/gallery/gallery__slider-1(1920).jpg" alt="">
+                    <img class="img" src="img/gallery/gallery__slider-1(1920).jpg" alt="фото в галерее">
                   </picture>
                 </a>
-                <a class="gallery__swiper-slide swiper-slide" data-graph-path="slide2">
+                <a class="gallery__swiper-slide swiper-slide link-reset" data-graph-path="slide2" aria-label="второй слайд">
                   <picture class="gallery__slide ">
                     <source media="(max-width: 570px)" srcset="img/gallery/gallery__slider-2(320).jpg">
                     <source media="(max-width: 991px)" srcset="img/gallery/gallery__slider-2(768).jpg">
                     <source media="(max-width: 1199px)" srcset="img/gallery/gallery__slider-2(1024).jpg">
-                    <img src="img/gallery/gallery__slider-2(1920).jpg" alt="">
+                    <img class="img" src="img/gallery/gallery__slider-2(1920).jpg" alt="фото в галерее">
                   </picture>
                 </a>
-                <a class="gallery__swiper-slide swiper-slide" data-graph-path="slide3">
+                <a class="gallery__swiper-slide swiper-slide link-reset" data-graph-path="slide3" aria-label="третий слайд">
                   <picture class="gallery__slide ">
                     <source media="(max-width: 570px)" srcset="img/gallery/gallery__slider-3(320).jpg">
                     <source media="(max-width: 991px)" srcset="img/gallery/gallery__slider-3(768).jpg">
                     <source media="(max-width: 1199px)" srcset="img/gallery/gallery__slider-3(1024).jpg">
-                    <img src="img/gallery/gallery__slider-3(1920).jpg" alt="">
+                    <img class="img" src="img/gallery/gallery__slider-3(1920).jpg" alt="фото в галерее">
                   </picture>
                 </a>
-                <a class="gallery__swiper-slide swiper-slide" data-graph-path="slide4">
+                <a class="gallery__swiper-slide swiper-slide link-reset" data-graph-path="slide4" aria-label="четвертый слайд">
                   <picture class="gallery__slide ">
                     <source media="(max-width: 570px)" srcset="img/gallery/gallery__slider-4(320).jpg">
                     <source media="(max-width: 991px)" srcset="img/gallery/gallery__slider-4(768).jpg">
                     <source media="(max-width: 1199px)" srcset="img/gallery/gallery__slider-4(1024).jpg">
-                    <img src="img/gallery/gallery__slider-4(1920).jpg" alt="">
+                    <img class="img" src="img/gallery/gallery__slider-4(1920).jpg" alt="фото в галерее">
                   </picture>
                 </a>
-                <a class="gallery__swiper-slide swiper-slide" data-graph-path="slide5">
+                <a class="gallery__swiper-slide swiper-slide link-reset" data-graph-path="slide5" aria-label="пятый слайд">
                   <picture class="gallery__slide ">
                     <source media="(max-width: 570px)" srcset="img/gallery/gallery__slider-5(320).jpg">
                     <source media="(max-width: 991px)" srcset="img/gallery/gallery__slider-5(768).jpg">
                     <source media="(max-width: 1199px)" srcset="img/gallery/gallery__slider-5(1024).jpg">
-                    <img src="img/gallery/gallery__slider-5(1920).jpg" alt="">
+                    <img class="img" src="img/gallery/gallery__slider-5(1920).jpg" alt="фото в галерее">
                   </picture>
                 </a>
-                <a class="gallery__swiper-slide swiper-slide" data-graph-path="slide6">
+                <a class="gallery__swiper-slide swiper-slide link-reset" data-graph-path="slide6" aria-label="Шестой слайд">
                   <picture class="gallery__slide ">
                     <source media="(max-width: 570px)" srcset="img/gallery/gallery__slider-6(320).jpg">
                     <source media="(max-width: 991px)" srcset="img/gallery/gallery__slider-6(768).jpg">
                     <source media="(max-width: 1199px)" srcset="img/gallery/gallery__slider-6(1024).jpg">
-                    <img src="img/gallery/gallery__slider-6(1920).jpg" alt="">
+                    <img class="img" src="img/gallery/gallery__slider-6(1920).jpg" alt="фото в галерее">
                   </picture>
                 </a>
               </div>
@@ -479,10 +493,10 @@
             <!-- контент модального окна -->
             <div class="graph-modal__img graph-modal__img1"></div>
             <div class="graph-modal__descr">
-              <p class="graph-modal__name">Казимир Малевич</p>
-              <p class="graph-modal__pic-name">«Женщина с граблями»</p>
-              <p class="graph-modal__data">1931–1932</p>
-              <p class="graph-modal__text">Картина из второй серии крестьянского цикла работ Казимира
+              <p class="list-reset graph-modal__name">Казимир Малевич</p>
+              <p class="list-reset graph-modal__pic-name">«Женщина с граблями»</p>
+              <p class="list-reset graph-modal__data">1931–1932</p>
+              <p class="list-reset graph-modal__text">Картина из второй серии крестьянского цикла работ Казимира
                 Малевича.
                 Художник принялся за её создание в 1930–1931 годах, после того, как первый цикл
                 был утерян после Берлинской и Варшавской выставок в 1927 году.</p>
@@ -496,10 +510,10 @@
             <!-- контент модального окна -->
             <div class="graph-modal__img graph-modal__img2"></div>
             <div class="graph-modal__descr">
-              <p class="graph-modal__name">Казимир Малевич</p>
-              <p class="graph-modal__pic-name">«Женщина с граблями»</p>
-              <p class="graph-modal__data">1931–1932</p>
-              <p class="graph-modal__text">Картина из второй серии крестьянского цикла работ Казимира
+              <p class="list-reset graph-modal__name">Казимир Малевич</p>
+              <p class="list-reset graph-modal__pic-name">«Женщина с граблями»</p>
+              <p class="list-reset graph-modal__data">1931–1932</p>
+              <p class="list-reset graph-modal__text">Картина из второй серии крестьянского цикла работ Казимира
                 Малевича.
                 Художник принялся за её создание в 1930–1931 годах, после того, как первый цикл
                 был утерян после Берлинской и Варшавской выставок в 1927 году.</p>
@@ -513,10 +527,10 @@
             <!-- контент модального окна -->
             <div class="graph-modal__img graph-modal__img3"></div>
             <div class="graph-modal__descr">
-              <p class="graph-modal__name">Казимир Малевич</p>
-              <p class="graph-modal__pic-name">«Женщина с граблями»</p>
-              <p class="graph-modal__data">1931–1932</p>
-              <p class="graph-modal__text">Картина из второй серии крестьянского цикла работ Казимира
+              <p class="list-reset graph-modal__name">Казимир Малевич</p>
+              <p class="list-reset graph-modal__pic-name">«Женщина с граблями»</p>
+              <p class="list-reset graph-modal__data">1931–1932</p>
+              <p class="list-reset graph-modal__text">Картина из второй серии крестьянского цикла работ Казимира
                 Малевича.
                 Художник принялся за её создание в 1930–1931 годах, после того, как первый цикл
                 был утерян после Берлинской и Варшавской выставок в 1927 году.</p>
@@ -530,10 +544,10 @@
             <!-- контент модального окна -->
             <div class="graph-modal__img graph-modal__img4"></div>
             <div class="graph-modal__descr">
-              <p class="graph-modal__name">Казимир Малевич</p>
-              <p class="graph-modal__pic-name">«Женщина с граблями»</p>
-              <p class="graph-modal__data">1931–1932</p>
-              <p class="graph-modal__text">Картина из второй серии крестьянского цикла работ Казимира
+              <p class="list-reset graph-modal__name">Казимир Малевич</p>
+              <p class="list-reset graph-modal__pic-name">«Женщина с граблями»</p>
+              <p class="list-reset graph-modal__data">1931–1932</p>
+              <p class="list-reset graph-modal__text">Картина из второй серии крестьянского цикла работ Казимира
                 Малевича.
                 Художник принялся за её создание в 1930–1931 годах, после того, как первый цикл
                 был утерян после Берлинской и Варшавской выставок в 1927 году.</p>
@@ -547,10 +561,10 @@
             <!-- контент модального окна -->
             <div class="graph-modal__img graph-modal__img5"></div>
             <div class="graph-modal__descr">
-              <p class="graph-modal__name">Казимир Малевич</p>
-              <p class="graph-modal__pic-name">«Женщина с граблями»</p>
-              <p class="graph-modal__data">1931–1932</p>
-              <p class="graph-modal__text">Картина из второй серии крестьянского цикла работ Казимира
+              <p class="list-reset graph-modal__name">Казимир Малевич</p>
+              <p class="list-reset graph-modal__pic-name">«Женщина с граблями»</p>
+              <p class="list-reset graph-modal__data">1931–1932</p>
+              <p class="list-reset graph-modal__text">Картина из второй серии крестьянского цикла работ Казимира
                 Малевича.
                 Художник принялся за её создание в 1930–1931 годах, после того, как первый цикл
                 был утерян после Берлинской и Варшавской выставок в 1927 году.</p>
@@ -564,10 +578,10 @@
             <!-- контент модального окна -->
             <div class="graph-modal__img graph-modal__img6"></div>
             <div class="graph-modal__descr">
-              <p class="graph-modal__name">Казимир Малевич</p>
-              <p class="graph-modal__pic-name">«Женщина с граблями»</p>
-              <p class="graph-modal__data">1931–1932</p>
-              <p class="graph-modal__text">Картина из второй серии крестьянского цикла работ Казимира
+              <p class="list-reset graph-modal__name">Казимир Малевич</p>
+              <p class="list-reset graph-modal__pic-name">«Женщина с граблями»</p>
+              <p class="list-reset graph-modal__data">1931–1932</p>
+              <p class="list-reset graph-modal__text">Картина из второй серии крестьянского цикла работ Казимира
                 Малевича.
                 Художник принялся за её создание в 1930–1931 годах, после того, как первый цикл
                 был утерян после Берлинской и Варшавской выставок в 1927 году.</p>
@@ -580,10 +594,10 @@
     </section>
     <section class="catalog" id="catalog">
       <div class="catalog__container container">
-        <h2 class="catalog__titl">
+        <h2 class="catalog__titl list-reset">
           Каталог
         </h2>
-        <p class="catalog__text">
+        <p class="list-reset catalog__text">
           Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского
           типа
           политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь
@@ -594,16 +608,16 @@
         </p>
 
         <div class="catalog__info">
-          <ul class="catalog__artist-list" id="artist">
+          <ul class="catalog__artist-list list-reset" id="artist">
             <li class="catalog__artist catalog__active" data-target="1" id="1">
               <picture class="catalog__artist-foto">
                 <source media="(max-width: 965px)" srcset="img/catalog/artist1-768.jpg">
                 <source media="(max-width: 1199px)" srcset="img/catalog/artist1-1024.jpg">
-                <img src="img/catalog/artist1-1920.jpg" alt="Доменико Гирландайо">
+                <img class="img" src="img/catalog/artist1-1920.jpg" alt="Доменико Гирландайо">
               </picture>
-              <h3 class="catalog__artist-name">Доменико Гирландайо</h3>
+              <h3 class="list-reset catalog__artist-name">Доменико Гирландайо</h3>
               <small class="catalog__artist-data">2 июня 1448–11 января 1494</small>
-              <p class="catalog__artist-descr">
+              <p class="list-reset catalog__artist-descr">
                 Один из ведущих флорентийских художников Кватроченто,
                 основатель
                 художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава
@@ -620,11 +634,11 @@
               <picture class="catalog__artist-foto">
                 <source media="(max-width: 965px)" srcset="img/catalog/artist2-768.jpg">
                 <source srcset="img/catalog/artist2-1024.jpg" media="(max-width: 1199px)">
-                <img src="img/catalog/artist2-1920.jpg" alt="Доменико Гирландайо">
+                <img class="img" src="img/catalog/artist2-1920.jpg" alt="Беноццо Гоццоли">
               </picture>
-              <h3 class="catalog__artist-name">Беноццо Гоццоли</h3>
+              <h3 class="list-reset catalog__artist-name">Беноццо Гоццоли</h3>
               <small class="catalog__artist-data">1420&nbsp;&mdash; 4&nbsp;октября 1497</small>
-              <p class="catalog__artist-descr">
+              <p class="list-reset catalog__artist-descr">
                 Итальянский художник, автор многочисленных циклов фресок, представитель
                 флорентийской школы живописи. Он&nbsp;известен в&nbsp;основном как автор многочисленных
                 фресок,
@@ -654,12 +668,12 @@
               <picture class="catalog__artist-foto">
                 <source media="(max-width: 965px)" srcset="img/catalog/artist3-768.jpg">
                 <source srcset="img/catalog/artist3-1024.jpg" media="(max-width: 1199px)">
-                <img src="img/catalog/artist3-1920.jpg" alt="Доменико Гирландайо">
+                <img class="img" src="img/catalog/artist3-1920.jpg" alt="Франческо Граначчи">
               </picture>
-              <h3 class="catalog__artist-name">Франческо Граначчи</h3>
+              <h3 class="list-reset catalog__artist-name">Франческо Граначчи</h3>
               <small class="catalog__artist-data">23&nbsp;июля 1469&nbsp;&mdash; 30&nbsp;ноября
                 1543</small>
-              <p class="catalog__artist-descr">
+              <p class="list-reset catalog__artist-descr">
                 На&nbsp;протяжении длительного периода своей жизни Франческо Граначчи оставался верным
                 определённым
                 стилевым чертам итальянского кватроченто (XV&nbsp;века) в&nbsp;рисунке фигур, композиции
@@ -684,12 +698,12 @@
               <picture class="catalog__artist-foto">
                 <source media="(max-width: 965px)" srcset="img/catalog/artist4-768.jpg">
                 <source srcset="img/catalog/artist4-1024.jpg" media="(max-width: 1199px)">
-                <img src="img/catalog/artist4-1920.jpg" alt="Доменико Гирландайо">
+                <img class="img" src="img/catalog/artist4-1920.jpg" alt="Грегорио ди Чекко">
               </picture>
-              <h3 class="catalog__artist-name">Грегорио ди Чекко</h3>
+              <h3 class="list-reset catalog__artist-name">Грегорио ди Чекко</h3>
               <small class="catalog__artist-data">известен
                 с&nbsp;1418&nbsp;г.&nbsp;по&nbsp;1424&nbsp;г.</small>
-              <p class="catalog__artist-descr">
+              <p class="list-reset catalog__artist-descr">
                 О&nbsp;Грегорио очень мало сведений. Известно, что он&nbsp;был приёмным сыном
                 и&nbsp;учеником Таддео
                 ди&nbsp;Бартоло, работал в&nbsp;его мастерской, а&nbsp;единственным достоверным
@@ -709,11 +723,11 @@
               <picture class="catalog__artist-foto">
                 <source media="(max-width: 965px)" srcset="img/catalog/artist5-768.jpg">
                 <source srcset="img/catalog/artist5-1024.jpg" media="(max-width: 1199px)">
-                <img src="img/catalog/artist5-1920.jpg" alt="Джованни да Удине">
+                <img class="img" src="img/catalog/artist5-1920.jpg" alt="Джованни да Удине">
               </picture>
-              <h3 class="catalog__artist-name">Джованни да Удине</h3>
+              <h3 class="list-reset catalog__artist-name">Джованни да Удине</h3>
               <small class="catalog__artist-data">15&nbsp;октября 1487&mdash; 1564&nbsp;г.</small>
-              <p class="catalog__artist-descr">
+              <p class="list-reset catalog__artist-descr">
                 Итальянский живописец, архитектор и&nbsp;декоратор. Помогал Рафаэлю в&nbsp;росписях
                 &laquo;Лоджий
                 Рафаэля&raquo; ватиканского дворца: он&nbsp;писал орнаменты и&nbsp;обрамления сюжетных
@@ -738,21 +752,21 @@
             <li class="catalog__artist" data-target="10">
               <picture class="catalog__artist-foto">
 
-                <img src="img/gallery/gallery__artisr-empty.jpg" alt="X-художник">
+                <img class="img" src="img/gallery/gallery__artisr-empty.jpg" alt="фото художника отсутствует">
               </picture>
-              <h3 class="catalog__artist-name">Что мы о нём знаем?</h3>
-              <p class="catalog__artist-descr">
+              <h3 class="list-reset catalog__artist-name">Что мы о нём знаем?</h3>
+              <p class="list-reset catalog__artist-descr">
                 Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!
               </p>
-              <a href="#gallery" class="catalog__empry-link link">В галерею</a>
+              <a href="#gallery" class="catalog__empry-link link link-reset" aria-label="Перейти в галерею">В галерею</a>
             </li>
           </ul>
 
 
           <div class="catalog__accordion accordion">
-            <ul class="questions reset-list js-accordion-container">
+            <ul class="questions js-accordion-container list-reset">
               <li class="accordion__question ac js-enabled">
-                <button class="accordion__heading ac-trigger">
+                <button class="accordion__heading ac-trigger" aria-label="Период с 1400 по 1499">
                   <span class="accordion__heading-text">
                     <span class="accordion__heading-text-wrap">C 1400 по 1499 гг.</span>
                   </span>
@@ -767,170 +781,171 @@
 
                 <div class="accordion__content ac-panel">
                   <div class="accordion__content-wrap">
-                    <ul class="catalog__content-list">
+                    <ul class="catalog__content-list list-reset" aria-label="Художники">
                       <li class="catalog__list-artist ">
-                        <a href="#artist" class="catalog__list-item btn" data-path="10">
+                        <a href="#artist" class="catalog__list-item btn link-reset" data-path="10" aria-label="Бенедетто ди Биндо">
                           <span class="catalog__item-name ">
                             Бенедетто ди Биндо
                           </span>
                         </a>
                       </li>
                       <li class="catalog__list-artist">
-                        <a href="#artist" class="catalog__list-item btn" data-path="10">
+                        <a href="#artist" class="catalog__list-item btn link-reset" data-path="10" aria-label="Бергоньоне">
                           <span class="catalog__item-name">
                             Бергоньоне, Амброджо
                           </span>
                         </a>
                       </li>
                       <li class="catalog__list-artist">
-                        <a href="#artist" class="catalog__list-item btn" data-path="10">
+                        <a href="#artist" class="catalog__list-item btn link-reset" data-path="10" aria-label="Биссоло">
                           <span class="catalog__item-name">
                             Биссоло, Франческо
                           </span>
                         </a>
                       </li>
                       <li class="catalog__list-artist">
-                        <a href="#artist" class="catalog__list-item btn" data-path="10">
+                        <a href="#artist" class="catalog__list-item btn link-reset" data-path="10" aria-label="Больтраффино">
                           <span class="catalog__item-name">
                             Больтраффио, Джованни
                           </span>
                         </a>
                       </li>
                       <li class="catalog__list-artist">
-                        <a href="#artist" class="catalog__list-item btn" data-path="10">
+                        <a href="#artist" class="catalog__list-item btn link-reset" data-path="10" aria-label="Бонсиньори">
                           <span class="catalog__item-name">
                             Бонсиньори, Франческо
                           </span>
                         </a>
                       </li>
                       <li class="catalog__list-artist">
-                        <a href="#artist" class="catalog__list-item btn" data-path="10">
+                        <a href="#artist" class="catalog__list-item btn link-reset" data-path="10" aria-label="Боттичини">
                           <span class="catalog__item-name">
                             Боттичини, Рафаэлло
                           </span>
                         </a>
                       </li>
                       <li class="catalog__list-artist">
-                        <a href="#artist" class="catalog__list-item btn" data-path="10">
+                        <a href="#artist" class="catalog__list-item btn link-reset" data-path="10" aria-label="Брамантино">
                           <span class="catalog__item-name">
                             Брамантино
                           </span>
                         </a>
                       </li>
                       <li class="catalog__list-artist">
-                        <a href="#artist" class="catalog__list-item btn" data-path="10">
+                        <a href="#artist" class="catalog__list-item btn link-reset" data-path="10" aria-label="людовик Бреа">
                           <span class="catalog__item-name">
                             Бреа, Людовико
                           </span>
                         </a>
                       </li>
                       <li class="catalog__list-artist">
-                        <a href="#artist" class="catalog__list-item btn" data-path="10">
+                        <a href="#artist" class="catalog__list-item btn link-reset" data-path="10" aria-label="Бьяджо">
                           <span class="catalog__item-name">
                             Бьяджо д’Антонио Туччи
                           </span>
                         </a>
                       </li>
                       <li class="catalog__list-artist">
-                        <a href="#artist" class="catalog__list-item btn" data-path="10">
+                        <a href="#artist" class="catalog__list-item btn link-reset" data-path="10" aria-label="Веккьетта">
                           <span class="catalog__item-name">
                             Веккьетта
                           </span>
                         </a>
                       </li>
                       <li class="catalog__list-artist">
-                        <button class="catalog__list-item btn " data-path="10">
+                        <a class="catalog__list-item btn link-reset " data-path="10" aria-label="Андреа Верроккьо">
                           <span class="catalog__item-name">
                             Андреа Верроккьо
                           </span>
-                        </button>
+                        </a>
                       </li>
                       <li class="catalog__list-artist">
-                        <a href="#artist" class="catalog__list-item btn catalog__list-active" data-path="1">
+                        <a href="#artist" class="catalog__list-item btn catalog__list-active link-reset" data-path="1"
+                          aria-label="Доминико Гирландайо">
                           <span class="catalog__item-name">
                             Доменико Гирландайо
                           </span>
                         </a>
                       </li>
                       <li class="catalog__list-artist">
-                        <a href="#artist" class="catalog__list-item btn" data-path="2">
+                        <a href="#artist" class="catalog__list-item btn link-reset" data-path="2" aria-label="Беноццо">
                           <span class="catalog__item-name">
                             Беноццо Гоццоли
                           </span>
                         </a>
                       </li>
                       <li class="catalog__list-artist">
-                        <a href="#artist" class="catalog__list-item btn" data-path="3">
+                        <a href="#artist" class="catalog__list-item btn link-reset" data-path="3" aria-label="Граначчи">
                           <span class="catalog__item-name">
                             Граначчи, Франческо
                           </span>
                         </a>
                       </li>
                       <li class="catalog__list-artist">
-                        <a href="#artist" class="catalog__list-item btn" data-path="4">
+                        <a href="#artist" class="catalog__list-item btn link-reset" data-path="4" aria-label="Грегорио ди Чукко">
                           <span class="catalog__item-name">
                             Грегорио ди Чекко
                           </span>
                         </a>
                       </li>
                       <li class="catalog__list-artist">
-                        <a href="#artist" class="catalog__list-item btn" data-path="5">
+                        <a href="#artist" class="catalog__list-item btn link-reset" data-path="5" aria-label="Джованни да Удине">
                           <span class="catalog__item-name">
                             Джованни да Удине
                           </span>
                         </a>
                       </li>
                       <li class="catalog__list-artist">
-                        <a href="#artist" class="catalog__list-item btn" data-path="10">
+                        <a href="#artist" class="catalog__list-item btn link-reset" data-path="10" aria-label="Джованни ди Паоло">
                           <span class="catalog__item-name">
                             Джованни ди Паоло
                           </span>
                         </a>
                       </li>
                       <li class="catalog__list-artist">
-                        <a href="#artist" class="catalog__list-item btn" data-path="10">
+                        <a href="#artist" class="catalog__list-item btn link-reset" data-path="10" aria-label="Джорджоне">
                           <span class="catalog__item-name">
                             Джорджоне
                           </span>
                         </a>
                       </li>
                       <li class="catalog__list-artist">
-                        <a href="#artist" class="catalog__list-item btn" data-path="10">
+                        <a href="#artist" class="catalog__list-item btn link-reset" data-path="10" aria-label="Парентино бернардо">
                           <span class="catalog__item-name">
                             Парентино, Бернардо
                           </span>
                         </a>
                       </li>
                       <li class="catalog__list-artist">
-                        <a href="#artist" class="catalog__list-item btn" data-path="10">
+                        <a href="#artist" class="catalog__list-item btn link-reset" data-path="10" aria-label="Пезеллино">
                           <span class="catalog__item-name">
                             Пезеллино
                           </span>
                         </a>
                       </li>
                       <li class="catalog__list-artist">
-                        <a href="#artist" class="catalog__list-item btn" data-path="10">
+                        <a href="#artist" class="catalog__list-item btn link-reset" data-path="10" aria-label="Пьетро Перуджино">
                           <span class="catalog__item-name">
                             Пьетро Перуджино
                           </span>
                         </a>
                       </li>
                       <li class="catalog__list-artist">
-                        <a href="#artist" class="catalog__list-item btn" data-path="10">
+                        <a href="#artist" class="catalog__list-item btn link-reset" data-path="10" aria-label="Перуцци">
                           <span class="catalog__item-name">
                             Перуцци, Бальдассаре
                           </span>
                         </a>
                       </li>
                       <li class="catalog__list-artist">
-                        <a href="#artist" class="catalog__list-item btn" data-path="10">
+                        <a href="#artist" class="catalog__list-item btn link-reset" data-path="10" aria-label="Пизанелло">
                           <span class="catalog__item-name">
                             Пизанелло
                           </span>
                         </a>
                       </li>
                       <li class="catalog__list-artist">
-                        <a href="#artist" class="catalog__list-item btn" data-path="10">
+                        <a href="#artist" class="catalog__list-item btn link-reset" data-path="10" aria-label="Пинтуриккьо">
                           <span class="catalog__item-name">
                             Пинтуриккьо
                           </span>
@@ -944,7 +959,7 @@
               </li>
 
               <li class="accordion__question ac js-enabled">
-                <button class="accordion__heading ac-trigger">
+                <button class="accordion__heading ac-trigger" aria-label="Период C 1500 по 1599 гг.">
                   <span class="accordion__heading-text">
                     <span class="accordion__heading-text-wrap">C 1500 по 1599 гг.</span>
                   </span>
@@ -965,10 +980,10 @@
                         </div>
                       </div>
                       <div class="catalog__empty-descr">
-                        <h3 class="catalog__empty-titl">Здесь пока пусто</h3>
-                        <p class="catalog__empty-text">А в галерее вы всегда можете найти что-то
+                        <h3 class="list-reset catalog__empty-titl">Здесь пока пусто</h3>
+                        <p class="list-reset catalog__empty-text">А в галерее вы всегда можете найти что-то
                           интересное для себя</p>
-                        <a href="#gallery" class="catalog__empty-link link">В галерею</a>
+                        <a href="#gallery" class="catalog__empty-link link link-reset" aria-label="В галерею">В галерею</a>
                       </div>
                     </div>
                   </div>
@@ -976,7 +991,7 @@
               </li>
 
               <li class="accordion__question ac js-enabled">
-                <button class="accordion__heading ac-trigger">
+                <button class="accordion__heading ac-trigger" aria-label="Период C 1600 по 1699 гг.">
                   <span class="accordion__heading-text">
                     <span class="accordion__heading-text-wrap">C 1600 по 1699 гг.</span>
                   </span>
@@ -997,10 +1012,10 @@
                         </div>
                       </div>
                       <div class="catalog__empty-descr">
-                        <h3 class="catalog__empty-titl">Здесь пока пусто</h3>
-                        <p class="catalog__empty-text">А в галерее вы всегда можете найти что-то
+                        <h3 class="list-reset catalog__empty-titl">Здесь пока пусто</h3>
+                        <p class="list-reset catalog__empty-text">А в галерее вы всегда можете найти что-то
                           интересное для себя</p>
-                        <a href="#gallery" class="catalog__empty-link link">В галерею</a>
+                        <a href="#gallery" class="catalog__empty-link link link-reset" aria-label="В галерею">В галерею</a>
                       </div>
                     </div>
                   </div>
@@ -1008,7 +1023,7 @@
               </li>
 
               <li class="accordion__question ac js-enabled">
-                <button class="accordion__heading ac-trigger">
+                <button class="accordion__heading ac-trigger" aria-label="Период C 1700 по 1799 гг.">
                   <span class="accordion__heading-text">
                     <span class="accordion__heading-text-wrap">C 1700 по 1799 гг.</span>
                   </span>
@@ -1029,10 +1044,10 @@
                         </div>
                       </div>
                       <div class="catalog__empty-descr">
-                        <h3 class="catalog__empty-titl">Здесь пока пусто</h3>
-                        <p class="catalog__empty-text">А в галерее вы всегда можете найти что-то
+                        <h3 class="list-reset catalog__empty-titl">Здесь пока пусто</h3>
+                        <p class="list-reset catalog__empty-text">А в галерее вы всегда можете найти что-то
                           интересное для себя</p>
-                        <a href="#gallery" class="catalog__empty-link link">В галерею</a>
+                        <a href="#gallery" class="catalog__empty-link link link-reset" aria-label="В галерею">В галерею</a>
                       </div>
                     </div>
                   </div>
@@ -1040,7 +1055,7 @@
               </li>
 
               <li class="accordion__question ac js-enabled">
-                <button class="accordion__heading ac-trigger">
+                <button class="accordion__heading ac-trigger" aria-label="Период C 1800 по 1899 гг.">
                   <span class="accordion__heading-text">
                     <span class="accordion__heading-text-wrap">C 1800 по 1899 гг.</span>
                   </span>
@@ -1061,10 +1076,10 @@
                         </div>
                       </div>
                       <div class="catalog__empty-descr">
-                        <h3 class="catalog__empty-titl">Здесь пока пусто</h3>
-                        <p class="catalog__empty-text">А в галерее вы всегда можете найти что-то
+                        <h3 class="list-reset catalog__empty-titl">Здесь пока пусто</h3>
+                        <p class="list-reset catalog__empty-text">А в галерее вы всегда можете найти что-то
                           интересное для себя</p>
-                        <a href="#gallery" class="catalog__empty-link link">В галерею</a>
+                        <a href="#gallery" class="catalog__empty-link link link-reset" aria-label="В галерею">В галерею</a>
                       </div>
                     </div>
                   </div>
@@ -1072,7 +1087,7 @@
               </li>
 
               <li class="accordion__question ac js-enabled">
-                <button class="accordion__heading ac-trigger">
+                <button class="accordion__heading ac-trigger" aria-label="Период C 1900 по 1999 гг.">
                   <span class="accordion__heading-text">
                     <span class="accordion__heading-text-wrap">C 1900 по 1999 гг.</span>
                   </span>
@@ -1093,10 +1108,10 @@
                         </div>
                       </div>
                       <div class="catalog__empty-descr">
-                        <h3 class="catalog__empty-titl">Здесь пока пусто</h3>
-                        <p class="catalog__empty-text">А в галерее вы всегда можете найти что-то
+                        <h3 class="list-reset catalog__empty-titl">Здесь пока пусто</h3>
+                        <p class="list-reset catalog__empty-text">А в галерее вы всегда можете найти что-то
                           интересное для себя</p>
-                        <a href="#gallery" class="catalog__empty-link link">В галерею</a>
+                        <a href="#gallery" class="catalog__empty-link link link-reset" aria-label="В галерею">В галерею</a>
                       </div>
                     </div>
                   </div>
@@ -1104,7 +1119,7 @@
               </li>
 
               <li class="accordion__question ac js-enabled">
-                <button class="accordion__heading ac-trigger">
+                <button class="accordion__heading ac-trigger" aria-label="Период C 2000 г">
                   <span class="accordion__heading-text">
                     <span class="accordion__heading-text-wrap">C 2000 г</span>
                   </span>
@@ -1125,10 +1140,10 @@
                         </div>
                       </div>
                       <div class="catalog__empty-descr">
-                        <h3 class="catalog__empty-titl">Здесь пока пусто</h3>
-                        <p class="catalog__empty-text">А в галерее вы всегда можете найти что-то
+                        <h3 class="list-reset catalog__empty-titl">Здесь пока пусто</h3>
+                        <p class="list-reset catalog__empty-text">А в галерее вы всегда можете найти что-то
                           интересное для себя</p>
-                        <a href="#gallery" class="catalog__empty-link link">В галерею</a>
+                        <a href="#gallery" class="catalog__empty-link link link-reset" aria-label="В галерею">В галерею</a>
                       </div>
                     </div>
                   </div>
@@ -1146,14 +1161,14 @@
     <!-- events -->
     <section class="events" id="events">
       <div class="events__container container">
-        <h2 class="events__titl">События</h2>
+        <h2 class="events__titl list-reset">События</h2>
         <div class="events__swiper-container swiper-container">
           <!-- враппер -->
           <div class="events__swiper-wrapper swiper-wrapper">
             <!-- слайды -->
             <div class="events__swiper-slide swiper-slide">
 
-              <img class="events__article-img" src="img/events/events1(1920).jpg" alt="Книжная гравюра в восприятии">
+              <img class="events__article-img img" src="img/events/events1(1920).jpg" alt="Книжная гравюра в восприятии">
 
               <div class="events__article-wrap">
                 <div class="events__article-top">
@@ -1161,22 +1176,22 @@
                     Музей им. Щусева <br>
                     с&nbsp;20&nbsp;марта по&nbsp;30&nbsp;апреля
                   </small>
-                  <h3 class="events__article-titl">
-                    Книжная&nbsp;гравюра<br> в живом восприятии
+                  <h3 class="list-reset events__article-titl">
+                    Книжная гравюра в живом&nbsp;восприятии
                   </h3>
-                  <p class="events__article-descr">
+                  <p class="list-reset events__article-descr">
                     Один из ведущих флорентийских художников Кватроченто, основатель художественной
                     династии, которую продолжили его брат Давид и сын Ридольфо
                   </p>
                 </div>
                 <div class="events__article-bottom">
-                  <a class="events__article-link" href="">Подробнее</a>
+                  <a class="events__article-link link-reset" href="" aria-label="подробнее">Подробнее</a>
                 </div>
               </div>
             </div>
             <div class="events__swiper-slide swiper-slide">
 
-              <img class="events__article-img" src="img/events/events2(1920).jpg" alt="Книжная гравюра в восприятии">
+              <img class="events__article-img img" src="img/events/events2(1920).jpg" alt="Открытая дискуссия">
 
               <div class="events__article-wrap">
                 <div class="events__article-top">
@@ -1185,22 +1200,22 @@
                     24&nbsp;марта 19:00
                   </small>
 
-                  <h3 class="events__article-titl">
+                  <h3 class="list-reset events__article-titl">
                     «Открытая дискуссия».<br> Дмитрий Петров и Сергей Ильин.
                   </h3>
-                  <p class="events__article-descr">
+                  <p class="list-reset events__article-descr">
                     Высокий уровень вовлечения представителей целевой аудитории является чётким
                     доказательством простого факта
                   </p>
                 </div>
                 <div class="events__article-bottom">
-                  <a class="events__article-link" href="">Подробнее</a>
+                  <a class="events__article-link link-reset" href="" aria-label="подробнее">Подробнее</a>
                 </div>
               </div>
             </div>
             <div class="events__swiper-slide swiper-slide">
 
-              <img class="events__article-img" src="img/events/events3(1920).jpg" alt="Книжная гравюра в восприятии">
+              <img class="events__article-img img" src="img/events/events3(1920).jpg" alt="Выставка «Формация 2020»">
 
               <div class="events__article-wrap">
                 <div class="events__article-top">
@@ -1208,22 +1223,22 @@
                     Еврейский музей <br>
                     с&nbsp;31&nbsp;марта по&nbsp;21&nbsp;апреля
                   </small>
-                  <h3 class="events__article-titl">
+                  <h3 class="list-reset events__article-titl">
                     Выставка «Формация 2020»
                   </h3>
-                  <p class="events__article-descr">
+                  <p class="list-reset events__article-descr">
                     Идейные соображения высшего порядка, а также современная методология разработки
                     играет важную роль в формировании глубокомысленных рассуждений
                   </p>
                 </div>
                 <div class="events__article-bottom">
-                  <a class="events__article-link" href="">Подробнее</a>
+                  <a class="events__article-link link-reset" href="" aria-label="подробнее">Подробнее</a>
                 </div>
               </div>
             </div>
             <div class="events__swiper-slide swiper-slide">
 
-              <img class="events__article-img" src="img/events/events4(1920).jpg" alt="Книжная гравюра в восприятии">
+              <img class="events__article-img img" src="img/events/events4(1920).jpg" alt="Джон Винзор. Фотографии из серии «Метафора»">
 
               <div class="events__article-wrap">
                 <div class="events__article-top">
@@ -1231,22 +1246,22 @@
                     ММАМ <br>
                     с&nbsp;8&nbsp;апреля по&nbsp;20&nbsp;мая
                   </small>
-                  <h3 class="events__article-titl">
+                  <h3 class="list-reset events__article-titl">
                     Джон Винзор. Фотографии из серии «Метафора»
                   </h3>
-                  <p class="events__article-descr">
+                  <p class="list-reset events__article-descr">
                     Один из ведущих флорентийских художников Кватроченто, основатель художественной
                     династии, которую продолжили его брат Давид и сын Ридольфо
                   </p>
                 </div>
                 <div class="events__article-bottom">
-                  <a class="events__article-link" href="">Подробнее</a>
+                  <a class="events__article-link link-reset" href="" aria-label="Подробнее">Подробнее</a>
                 </div>
               </div>
             </div>
             <div class="events__swiper-slide swiper-slide">
 
-              <img class="events__article-img" src="img/events/events5(1920).jpg" alt="Книжная гравюра в восприятии">
+              <img class="events__article-img img" src="img/events/events5(1920).jpg" alt="XXIV Международная биеннале молодого искусства">
 
               <div class="events__article-wrap">
                 <div class="events__article-top">
@@ -1254,15 +1269,15 @@
                     Третьяковка на&nbsp;Крымском валу <br>
                     с&nbsp;30&nbsp;марта по&nbsp;30&nbsp;апреля
                   </small>
-                  <h3 class="events__article-titl">
+                  <h3 class="list-reset events__article-titl">
                     XXIV Международная биеннале молодого искусства
                   </h3>
-                  <p class="events__article-descr">
+                  <p class="list-reset events__article-descr">
                     Внезапно, реплицированные с зарубежных источников, современные исследования
                   </p>
                 </div>
                 <div class="events__article-bottom">
-                  <a class="events__article-link" href="">Подробнее</a>
+                  <a class="events__article-link link-reset" href="" aria-label="подробнее">Подробнее</a>
                 </div>
               </div>
             </div>
@@ -1270,7 +1285,7 @@
           </div>
           <div class="events__swiper-pagination swiper-pagination"></div>
           <!-- кнопки для навигации -->
-          <button class="events__swiper-button-prev events__swiper-button btn">
+          <button class="events__swiper-button-prev events__swiper-button btn" aria-label="Предыдущий слайд">
             <svg class="events__icon" width="50" height="50" viewbox="0 0 50 50" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path class="events__icon-fond"
@@ -1283,7 +1298,7 @@
             </svg>
 
           </button>
-          <button class="events__swiper-button-next events__swiper-button btn">
+          <button class="events__swiper-button-next events__swiper-button btn" aria-label="Следующий слайд">
             <svg class="events__icon" width="50" height="50" viewbox="0 0 50 50" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path class="events__icon-fond"
@@ -1304,15 +1319,15 @@
     <!-- projects -->
     <section class="projects" id="projects">
       <div class="projects__container container">
-        <h2 class="projects__titl">Проекты</h2>
-        <p class="projects__text">
+        <h2 class="projects__titl list-reset">Проекты</h2>
+        <p class="list-reset projects__text">
           Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности
           однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые
           государства
           смешаны с не уникальными данными до степени совершённой неузнаваемости, из-за чего возрастает
           их статус
           бесполезности. Прежде всего, постоянное информационно-пропагандистское
-          <button class="projects__tultip-btn btn js-tooltip"
+          <button class="projects__tultip-btn btn js-tooltip" aria-label="Всплывающая подсказка"
             data-tippy-content="Пример современных тенденций — современная методология разработки">
             <svg class="projects__tultip-icon" width="16" height="16" viewbox="0 0 16 16" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -1329,7 +1344,7 @@
           однозначно фиксирует необходимость экономической целесообразности принимаемых решений.
           И нет сомнений,
           что действия представителей оппозиции могут быть рассмотрены
-          <button class="projects__tultip-btn btn js-tooltip"
+          <button class="projects__tultip-btn btn js-tooltip" aria-label="Всплывающая подсказка"
             data-tippy-content="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции">
             <svg class="projects__tultip-icon" width="16" height="16" viewbox="0 0 16 16" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -1344,7 +1359,8 @@
           </button>
           исключительно в разрезе маркетинговых
           и финансовых
-          <button class="projects__tultip-btn btn js-tooltip" data-tippy-content="В стремлении повысить качество">
+          <button class="projects__tultip-btn btn js-tooltip" aria-label="Всплывающая подсказка"
+            data-tippy-content="В стремлении повысить качество">
             <svg class="projects__tultip-icon" width="16" height="16" viewbox="0 0 16 16" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path d="M15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8C0.5 3.85786
@@ -1362,71 +1378,72 @@
           очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной
           неузнаваемости.
           Подробнее:
-          <a class="projects__link link link-1" href="http://blanchard-art.ru/projects">
+          <a class="projects__link link link-1 link-reset" href="http://blanchard-art.ru/projects" aria-label="ссылка подробнее">
             <span class="projects__link-text">blanchard-art.ru/projects</span>
           </a>
-          <a class="projects__link link link-2" href="http://blanchard-art.ru">
+          <a class="projects__link link link-2 link-reset" href="http://blanchard-art.ru" aria-label="ссылка подробнее">
             <span class="projects__link-text">blanchard-art.ru</span>
           </a>
-          <a class="projects__link link link-3" href="http://blanchard-art.ru/projects/about">
+          <a class="projects__link link link-3 link-reset" href="http://blanchard-art.ru/projects/about"
+            aria-label="Ссылка подробнее">
             <span class="projects__link-text">blanchard-art.ru/projects/about</span>
           </a>
         </p>
-        <h3 class="projects__subtitl">Партнёры проектов:</h3>
+        <h3 class="list-reset projects__subtitl">Партнёры проектов:</h3>
         <div class="projects__swiper">
           <div class="projects__swiper-container swiper-container">
             <!-- враппер -->
             <div class="projects__swiper-wrapper swiper-wrapper">
               <!-- слайды -->
-              <a href="" class="projects__swiper-slide swiper-slide">
+              <a href="" class="projects__swiper-slide swiper-slide link-reset" aria-label="первый партнер">
                 <picture class="projects__partner">
-                  <img class="projects__img" src="img/project/projects1-1920.png" alt="Freelands Foundation">
+                  <img class="projects__img img" src="img/project/projects1-1920.png" alt="Freelands Foundation">
                 </picture>
               </a>
-              <a href="" class="projects__swiper-slide swiper-slide">
+              <a href="" class="projects__swiper-slide swiper-slide link-reset" aria-label="второй партнер">
                 <picture class="projects__partner">
-                  <img class="projects__img" src="img/project/projects2-1920.png" alt="Freelands Foundation">
+                  <img class="projects__img img" src="img/project/projects2-1920.png" alt="Freelands Foundation">
                 </picture>
               </a>
-              <a href="" class="projects__swiper-slide swiper-slide">
+              <a href="" class="projects__swiper-slide swiper-slide link-reset" aria-label="третий партнер">
                 <picture class="projects__partner">
-                  <img class="projects__img" src="img/project/projects3-1920.png" alt="Freelands Foundation">
+                  <img class="projects__img img" src="img/project/projects3-1920.png" alt="Freelands Foundation">
                 </picture>
               </a>
-              <a href="" class="projects__swiper-slide swiper-slide">
+              <a href="" class="projects__swiper-slide swiper-slide link-reset" aria-label="четвертый партнер">
                 <picture class="projects__partner">
-                  <img class="projects__img" src="img/project/projects4-1920.png" alt="Freelands Foundation">
+                  <img class="projects__img img" src="img/project/projects4-1920.png" alt="Freelands Foundation">
                 </picture>
               </a>
-              <a href="" class="projects__swiper-slide swiper-slide">
+              <a href="" class="projects__swiper-slide swiper-slide link-reset" aria-label="пятый партнер">
                 <picture class="projects__partner">
-                  <img class="projects__img" src="img/project/projects5-1920.png" alt="Freelands Foundation">
+                  <img class="projects__img img" src="img/project/projects5-1920.png" alt="Freelands Foundation">
                 </picture>
               </a>
-              <a href="" class="projects__swiper-slide swiper-slide">
+              <a href="" class="projects__swiper-slide swiper-slide link-reset" aria-label=" шестой партнер">
                 <picture class="projects__partner">
-                  <img class="projects__img" src="img/project/projects6-1920.png" alt="Freelands Foundation">
+                  <img class="projects__img img" src="img/project/projects6-1920.png" alt="Freelands Foundation">
                 </picture>
               </a>
-              <a href="" class="projects__swiper-slide swiper-slide">
+              <a href="" class="projects__swiper-slide swiper-slide link-reset" aria-label="седьмой партнер">
                 <picture class="projects__partner">
-                  <img class="projects__img" src="img/project/projects7-1920.png" alt="Freelands Foundation">
+                  <img class="projects__img img" src="img/project/projects7-1920.png" alt="Freelands Foundation">
                 </picture>
               </a>
-              <a href="" class="projects__swiper-slide swiper-slide">
+              <a href="" class="projects__swiper-slide swiper-slide link-reset" aria-label="Восьмой партнер">
                 <picture class="projects__partner">
-                  <img class="projects__img" src="img/project/projects8-1920.png" alt="Freelands Foundation">
+                  <img class="projects__img img" src="img/project/projects8-1920.png" alt="Freelands Foundation">
                 </picture>
               </a>
-              <a href="" class="projects__swiper-slide swiper-slide">
+              <a href="" class="projects__swiper-slide swiper-slide link-reset" aria-label="Девятый партнер">
                 <picture class="projects__partner">
-                  <img class="projects__img" src="img/project/projects9-1920.png" alt="Freelands Foundation">
+                  <img class="projects__img img" src="img/project/projects9-1920.png" alt="Freelands Foundation">
                 </picture>
               </a>
             </div>
             <!-- кнопки для навигации -->
             <button class="projects__swiper-button-prev projects__btn projects__swiper-btn btn"
-              aria-label="К следующему слайду">
+              aria-label="К предыдущему слайду">
               <svg width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="fond"
                   d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z"
@@ -1437,7 +1454,7 @@
                 <path class="arrow" d="M14 20L19 15L14 10" stroke="black" />
               </svg></button>
             <button class="projects__swiper-button-next projects__btn projects__swiper-btn btn"
-              aria-label="К предыдущему слайду">
+              aria-label="К следующему слайду">
               <svg width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="fond"
                   d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z"
@@ -1456,28 +1473,28 @@
     <section class="contacts" id="contacts">
       <div class="contacts__container container">
         <div class="contacts__place">
-          <h3 class="contacts__place-name">Шоурум № 4</h3>
+          <h3 class="list-reset contacts__place-name">Шоурум № 4</h3>
           <address class="contacts__place-address">Леонтьевский&nbsp;переулок,&nbsp;дом 5/1</address>
         </div>
         <form id="form" class="contacts__form" data-netlify="true" action="#" method="POST">
           <div class="contacts__form-wrap">
             <input class="contacts__form-input" type="text" name="name" id="name" placeholder="Имя*"
-              data-validate-field="name" required>
+              data-validate-field="name" aria-label="Введите имя" required>
 
           </div>
           <div class="contacts__form-wrap">
             <input class="contacts__form-input" type="tel" name="number" id="number" placeholder="Телефон*"
-              data-validate-field="number" data-validate-rules="phone" required>
+              data-validate-field="number" data-validate-rules="phone" aria-label="Введите телефон" required>
 
           </div>
-          <button class="contacts__form-btn btn1 btn">Заказать обратный звонок</button>
-          <button class="contacts__form-btn btn2">Заказать</button>
+          <button class="contacts__form-btn btn1 btn" aria-label="Заказать звонок">Заказать обратный звонок</button>
+          <button class="contacts__form-btn btn2" aria-label="Заказать звонок">Заказать</button>
         </form>
         <div class="contacts__feedback">
-          <h3 class="contacts__feedback-titl">Связаться в один клик</h3>
-          <ul class="contacts__list flex">
+          <h3 class="list-reset contacts__feedback-titl">Связаться в один клик</h3>
+          <ul class="contacts__list list-reset flex">
             <li class="contacts__item">
-              <a class="contacts__link" href="https://www.whatsapp.com/" target="_blank">
+              <a class="contacts__link link-reset" href="https://www.whatsapp.com/" target="_blank" aria-label="Мессенджер Whatsapp">
                 <svg width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M20 39.375C30.7005 39.375 39.375 30.7005 39.375 20C39.375 9.29948 30.7005 0.625 20 0.625C9.29948 0.625 0.625 9.29948 0.625 20C0.625 30.7005 9.29948 39.375 20 39.375Z"
@@ -1489,7 +1506,7 @@
               </a>
             </li>
             <li class="contacts__item">
-              <a class="contacts__link" href="https://t.me/RayGi_cd" target="_blank">
+              <a class="contacts__link link-reset" href="https://t.me/RayGi_cd" target="_blank" aria-label="Мессенджер телеграм">
                 <svg width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40Z"
@@ -1515,16 +1532,16 @@
   <footer class="footer">
     <div class="footer__container container flex">
       <div class="footer__logo">
-        <a class="footer__link">
+        <a class="footer__link link-reset" aria-label="Логотип Blanchard">
           <picture class="footer__link-img">
             <source media="(max-width:571px)" srcset="img/footer__logo320.svg">
-            <img src="img/logo_desctop.svg" alt="">
+            <img class="img" src="img/logo_desctop.svg" alt="Логотип Blanchard">
           </picture>
         </a>
       </div>
-      <ul class="footer__list flex">
+      <ul class="footer__list list-reset flex" aria-label="социальные сети">
         <li class="footer__item">
-          <a href="" class="footer__link">
+          <a href="" class="footer__link link-reset" aria-label="ссылка Вконтакте">
             <svg class="footer__social" width="45" height="45" viewbox="0 0 45 45" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -1534,7 +1551,7 @@
           </a>
         </li>
         <li class="footer__item">
-          <a href="" class="footer__link">
+          <a href="" class="footer__link link-reset" aria-label="ссылка Однокласники">
             <svg class="footer__social" width="45" height="45" viewbox="0 0 45 45" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -1548,7 +1565,7 @@
           </a>
         </li>
         <li class="footer__item">
-          <a href="" class="footer__link">
+          <a href="" class="footer__link link-reset" aria-label="Ссылка фесбук">
             <svg class="footer__social" width="45" height="45" viewbox="0 0 45 45" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -1562,18 +1579,10 @@
     </div>
 
   </footer>
-
-  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
-  <script src="js/inputmask.min.js"></script>
-  <script src="js/graph-modal.min.js"></script>
-  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
-  <script src="js/accordion.min.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="https://unpkg.com/@popperjs/core@2"></script>
-  <script src="https://unpkg.com/tippy.js@6"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU"></script>
-  <script src="js/choices.min.js"></script>
   <script src="js/script.js"></script>
+
+
 </body>
 
 </html>
