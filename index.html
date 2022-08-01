@@ -409,7 +409,7 @@
           <div class="gallery__slider">
             <div class="gallery__slider-navigation">
               <button class="gallery__swiper-button-prev gallery__swiper-btn btn" aria-label="Предыдущий слайд">
-                <svg width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- <svg  viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path class="fond"
                     d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z"
                     fill="#666666" />
@@ -417,11 +417,18 @@
                     d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z"
                     stroke="#666666" />
                   <path class="arrow" d="M14 20L19 15L14 10" stroke="white" />
-                </svg>
+                </svg> -->
+                <svg  width="50" height="50" viewbox="0 0 50 50" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path class="circle"
+                      d="M49 25C49 11.7452 38.2548 1.00001 25 1.00001C11.7452 1.00001 1 11.7452 1 25C1 38.2548 11.7452 49 25 49C38.2548 49 49 38.2548 49 25Z"
+                      fill="#666666" stroke="#666666" stroke-width="2" />
+                    <path  class="arrow" d="M33.3333 26.6667L25 18.3333L16.6667 26.6667" stroke="white" />
+                  </svg>
               </button>
               <div class="gallery__swiper-pagination swiper-pagination "></div>
               <button class="gallery__swiper-button-next gallery__swiper-btn btn" aria-label="Следующий слайд">
-                <svg width="30" height="30" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- <svg  viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path class="fond"
                     d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z"
                     fill="#666666" />
@@ -429,7 +436,14 @@
                     d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z"
                     stroke="#666666" />
                   <path class="arrow" d="M14 20L19 15L14 10" stroke="white" />
-                </svg>
+                </svg> -->
+                <svg  width="50" height="50" viewbox="0 0 50 50" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path class="circle"
+                      d="M49 25C49 11.7452 38.2548 1.00001 25 1.00001C11.7452 1.00001 1 11.7452 1 25C1 38.2548 11.7452 49 25 49C38.2548 49 49 38.2548 49 25Z"
+                      fill="#666666" stroke="#666666" stroke-width="2" />
+                    <path d="M33.3333 26.6667L25 18.3333L16.6667 26.6667" stroke="white" />
+                  </svg>
               </button>
             </div>
             <div class="gallery__swiper swiper">
@@ -758,7 +772,7 @@
               <p class="list-reset catalog__artist-descr">
                 Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!
               </p>
-              <a href="#gallery" class="catalog__empry-link link link-reset" aria-label="Перейти в галерею">В галерею</a>
+              <a href="#gallery" class="catalog__empty-link link-reset" aria-label="Перейти в галерею">В галерею</a>
             </li>
           </ul>
 
@@ -937,14 +951,35 @@
                           </span>
                         </a>
                       </li>
-                      <li class="catalog__list-artist">
+                      <li class="catalog__list-artist catalog__hiden2">
                         <a href="#artist" class="catalog__list-item btn link-reset" data-path="10" aria-label="Пизанелло">
                           <span class="catalog__item-name">
                             Пизанелло
                           </span>
                         </a>
                       </li>
-                      <li class="catalog__list-artist">
+                      <li class="catalog__list-artist catalog__hiden2" >
+                        <a href="#artist" class="catalog__list-item btn link-reset" data-path="10" aria-label="Пинтуриккьо">
+                          <span class="catalog__item-name">
+                            Пинтуриккьо
+                          </span>
+                        </a>
+                      </li>
+                      <li class="catalog__list-artist catalog__hiden">
+                        <a href="#artist" class="catalog__list-item btn link-reset" data-path="10" aria-label="Пинтуриккьо">
+                          <span class="catalog__item-name">
+                            Пинтуриккьо
+                          </span>
+                        </a>
+                      </li>
+                      <li class="catalog__list-artist catalog__hiden">
+                        <a href="#artist" class="catalog__list-item btn link-reset" data-path="10" aria-label="Перуцци">
+                          <span class="catalog__item-name">
+                            Перуцци, Бальдассаре
+                          </span>
+                        </a>
+                      </li>
+                      <li class="catalog__list-artist catalog__hiden">
                         <a href="#artist" class="catalog__list-item btn link-reset" data-path="10" aria-label="Пинтуриккьо">
                           <span class="catalog__item-name">
                             Пинтуриккьо
@@ -983,7 +1018,7 @@
                         <h3 class="list-reset catalog__empty-titl">Здесь пока пусто</h3>
                         <p class="list-reset catalog__empty-text">А в галерее вы всегда можете найти что-то
                           интересное для себя</p>
-                        <a href="#gallery" class="catalog__empty-link link link-reset" aria-label="В галерею">В галерею</a>
+                        <a href="#gallery" class="catalog__empty-link link-reset" aria-label="В галерею">В галерею</a>
                       </div>
                     </div>
                   </div>
@@ -1015,7 +1050,7 @@
                         <h3 class="list-reset catalog__empty-titl">Здесь пока пусто</h3>
                         <p class="list-reset catalog__empty-text">А в галерее вы всегда можете найти что-то
                           интересное для себя</p>
-                        <a href="#gallery" class="catalog__empty-link link link-reset" aria-label="В галерею">В галерею</a>
+                        <a href="#gallery" class="catalog__empty-link link-reset" aria-label="В галерею">В галерею</a>
                       </div>
                     </div>
                   </div>
@@ -1047,7 +1082,7 @@
                         <h3 class="list-reset catalog__empty-titl">Здесь пока пусто</h3>
                         <p class="list-reset catalog__empty-text">А в галерее вы всегда можете найти что-то
                           интересное для себя</p>
-                        <a href="#gallery" class="catalog__empty-link link link-reset" aria-label="В галерею">В галерею</a>
+                        <a href="#gallery" class="catalog__empty-link link-reset" aria-label="В галерею">В галерею</a>
                       </div>
                     </div>
                   </div>
@@ -1079,7 +1114,7 @@
                         <h3 class="list-reset catalog__empty-titl">Здесь пока пусто</h3>
                         <p class="list-reset catalog__empty-text">А в галерее вы всегда можете найти что-то
                           интересное для себя</p>
-                        <a href="#gallery" class="catalog__empty-link link link-reset" aria-label="В галерею">В галерею</a>
+                        <a href="#gallery" class="catalog__empty-link link-reset" aria-label="В галерею">В галерею</a>
                       </div>
                     </div>
                   </div>
@@ -1111,7 +1146,7 @@
                         <h3 class="list-reset catalog__empty-titl">Здесь пока пусто</h3>
                         <p class="list-reset catalog__empty-text">А в галерее вы всегда можете найти что-то
                           интересное для себя</p>
-                        <a href="#gallery" class="catalog__empty-link link link-reset" aria-label="В галерею">В галерею</a>
+                        <a href="#gallery" class="catalog__empty-link link-reset" aria-label="В галерею">В галерею</a>
                       </div>
                     </div>
                   </div>
@@ -1143,7 +1178,7 @@
                         <h3 class="list-reset catalog__empty-titl">Здесь пока пусто</h3>
                         <p class="list-reset catalog__empty-text">А в галерее вы всегда можете найти что-то
                           интересное для себя</p>
-                        <a href="#gallery" class="catalog__empty-link link link-reset" aria-label="В галерею">В галерею</a>
+                        <a href="#gallery" class="catalog__empty-link link-reset" aria-label="В галерею">В галерею</a>
                       </div>
                     </div>
                   </div>
@@ -1162,6 +1197,7 @@
     <section class="events" id="events">
       <div class="events__container container">
         <h2 class="events__titl list-reset">События</h2>
+        <div class="events__wrap">
         <div class="events__swiper-container swiper-container">
           <!-- враппер -->
           <div class="events__swiper-wrapper swiper-wrapper">
@@ -1313,6 +1349,7 @@
           </button>
 
         </div>
+      </div>
 
       </div>
     </section>
@@ -1473,7 +1510,7 @@
     <section class="contacts" id="contacts">
       <div class="contacts__container container">
         <div class="contacts__place">
-          <h3 class="list-reset contacts__place-name">Шоурум № 4</h3>
+          <h3 class="list-reset contacts__place-name">Шоурум №  4</h3>
           <address class="contacts__place-address">Леонтьевский&nbsp;переулок,&nbsp;дом 5/1</address>
         </div>
         <form id="form" class="contacts__form" data-netlify="true" action="#" method="POST">

@@ -163,7 +163,7 @@ var swiper = new Swiper('.gallery__swiper', {
       spaceBetween: 34
     },
 
-    1199: {
+    1210: {
       slidesPerView: 3,
       slidesPerGroup: 3,
       spaceBetween: 50
@@ -348,7 +348,7 @@ const projectsSwiper = new Swiper('.projects__swiper-container', {
       spaceBetween: 50
     },
 
-    1199: {
+    1210: {
       slidesPerView: 3,
       slidesPerGroup: 3,
       spaceBetween: 50
