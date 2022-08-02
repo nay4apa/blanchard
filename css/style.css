@@ -1792,6 +1792,10 @@ html {
   color: var(--violet-dark);
 }
 
+.is-active .accordion__heading:focus-visible:not(:active) .accordion__heading-text .accordion__heading-text-wrap {
+  color: var(--white);
+}
+
 .head-icon {
   position: absolute;
   top: 50%;
