@@ -1020,6 +1020,7 @@ html {
   position: relative;
   margin-bottom: 172px;
   background: transparent;
+  transition: background 0.3s ease-in-out;
 }
 
 .choices__item {
@@ -1038,11 +1039,23 @@ html {
 
 .choices__inner {
   height: 30px;
-  padding: 1px 16px;
+  padding: 0 16px;
+  /* padding-top: 8px; */
+  min-height: 40px;
   border: 1px solid #FFFFFF;
   border-radius: 6px;
   background: transparent;
+  transition: background 0.3s ease-in-out;
 }
+
+.choices[data-type*=select-one] .choices__inner {
+  padding-top: 2px;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted,
+ .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+  transition: background 0.3s ease-in-out,color 0.3s ease-in-out ;
+ }
 
 .is-focused {
   background: rgba(255, 255, 255, 0.2);
@@ -1271,35 +1284,24 @@ html {
   height: 30px;
 }
 
-.projects__swiper-btn .circle,
 .gallery__swiper-btn .circle {
   transition: stroke 0.3s ease-in-out,fill 0.3s ease-in-out;
 }
 
-.gallery__swiper-btn:focus-visible:not(:hover):not(:active) .circle,
-.projects__swiper-btn:focus-visible:not(:hover):not(:active) .circle {
+.gallery__swiper-btn:focus-visible:not(:hover):not(:active) .circle {
   stroke: var(--black)
 }
 
 
-.gallery__swiper-btn:hover:hover:not(:focus-visible):not(:active) .circle {
+.gallery__swiper-btn:hover:not(:focus-visible):not(:active) .circle {
   fill: var(--violet-middle);
   stroke: var(--violet-middle)
 
 }
 
-.projects__swiper-btn:hover .fond {
-  fill: var(--violet-middle);
-}
-
-
 .gallery__swiper-btn:active .circle {
   fill: var(--violet-dark);
   stroke: var(--black);
-}
-
-.projects__swiper-btn:active .circle {
-  stroke: var(--black)
 }
 
 .gallery__swiper-slide {
@@ -1462,6 +1464,10 @@ html {
 
 .catalog {
   padding: 80px 0;
+}
+
+.catalog__hiden{
+  visibility: hidden;
 }
 
 .catalog__titl {
@@ -1695,9 +1701,15 @@ html {
   color: var(--black-light);
 }
 
-.accordion__question:first-child .accordion__heading {
+.is-active .accordion__question:first-child .accordion__heading {
+  border-top: 1px solid var(--violet-dark);
+}
+
+.accordion__question .accordion__heading {
   border-top: 1px solid var(--light-middle-gray);
 }
+
+
 
 .accordion__heading {
   position: relative;
@@ -1723,6 +1735,12 @@ html {
   border-color: var(--violet-middle);
 }
 
+.is-active .accordion__question .accordion__heading,
+.is-active .accordion__heading {
+  border-top: 1px solid var(--violet-dark);
+  border-color: var(--violet-dark);
+}
+
 .accordion__heading-text {
   position: relative;
 }
@@ -1734,6 +1752,7 @@ html {
   font-size: 24px;
   line-height: 32px;
   color: var(--black);
+  transition: color 0.3s ease-in-out;
 }
 
 .accordion__heading-text::before {
@@ -1756,13 +1775,21 @@ html {
   color: var(--violet-dark);
 }
 
-.accordion__heading:focus-visible:not(:active) {
+.accordion__question:hover .accordion__heading-text-wrap {
   color: var(--white);
   outline: none;
 }
 
+.accordion__heading:focus-visible:not(:active) .accordion__heading-text-wrap {
+  color: var(--white);
+}
+
 .accordion__heading:focus-visible:not(:active) .accordion__heading-text::before {
   transform: translate(-50%, -50%) scaleX(1);
+}
+
+.is-active .accordion__heading .accordion__heading-text .accordion__heading-text-wrap {
+  color: var(--violet-dark);
 }
 
 .head-icon {
@@ -1792,6 +1819,10 @@ html {
   background-color: var(--white);
 }
 
+.accordion__question:hover .accordion__heading-text-wrap {
+  color: var(--violet-middle);
+}
+
 .is-active .head-icon {
   transform: translateY(-50%) rotate(0);
 }
@@ -1807,6 +1838,7 @@ html {
   margin-top: -1px;
   border-bottom: 1px solid transparent;
 }
+
 
 .is-active .accordion__content {
   visibility: visible;
@@ -1965,6 +1997,10 @@ html {
   color: var(--black-light);
 }
 
+.events__wrap {
+  display:flex;
+}
+
 .events__swiper-container {
   display: flex;
   /* position: relative; */
@@ -1977,41 +2013,47 @@ html {
 }
 
 .events__swiper-slide {
-  min-height: 700px;
+  /* min-height: 700px; */
   height: 100%;
   font-size: 0;
+  border: 1px solid var(--light-middle-gray);
 }
 
 .events__article-img {
   width: 100%;
+  margin-bottom: 2px;
   object-fit: cover;
   object-position: top;
+}
+
+.events__box {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 300px);
+  min-height: 400px;
+  padding: 48px;
+  padding-top: 0;
+  padding-bottom: 40px;
 }
 
 .events__article-wrap {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 360px;
-  height: calc(100% - 300px);
-  padding: 48px;
-  padding-top: 0;
-  padding-bottom: 40px;
-  border: 1px solid var(--light-middle-gray);
-  border-top: none;
-}
-
-.events__wrap {
-  display: flex;
+  min-height: 300px;
+  height: 100%;
 }
 
 .events__article-top {
-  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .events__article-info {
   display: inline-block;
   word-wrap: break-word;
+  /* padding-left: 50px; */
   margin-bottom: 13px;
   font-style: normal;
   font-weight: 600;
@@ -2045,8 +2087,9 @@ html {
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
-  color: #9D5CD0;
-  border-bottom: 1px solid #9D5CD0;
+  color: var(--violet-middle);
+  border-bottom: 1px solid var(--violet-middle);
+  transition: color 0.3s ease-in-out;
 }
 
 .events__article-link:before {
@@ -2204,7 +2247,7 @@ html {
 }
 
 .projects__swiper-slide {
-  height: 150px;
+  min-height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2232,7 +2275,6 @@ html {
 
 .projects__swiper-slide:active {
   filter: none;
-  /* border-color: #9D5CD0; */
   outline: 1px solid #9D5CD0;
 }
 
@@ -2251,6 +2293,24 @@ html {
 
 .projects__swiper-button-next {
   right: -2px;
+}
+
+.projects__swiper-btn .circle {
+  transition: fill 0.3s ease-in-out,stroke 0.3s ease-in-out;
+}
+
+.projects__swiper-btn:hover:not(:focus-visible):not(:active) .circle {
+  fill: var(--violet-ultra-light);
+  stroke: var(--violet-ultra-light);
+}
+
+.projects__swiper-btn:focus-visible:not(:active):not(:hover) .circle {
+  stroke: var(--violet-middle);
+}
+
+.projects__swiper-btn:active:not(:focus-visible) .circle {
+  stroke: var(--violet-middle);
+  fill: var(--violet-ultra-light);
 }
 
 /* tooltip */
@@ -2357,6 +2417,7 @@ html {
   padding-bottom: 12px;
   border: 1px solid #333333;
   border-radius: 100px;
+  transition: background 0.3s ease-in-out;
 }
 
 .contacts__form-input:focus,
@@ -2381,7 +2442,7 @@ html {
 
 .just-validate-error-label {
   position: absolute;
-  top: -12px;
+  top: -16px;
   left: 20px;
   font-style: normal;
   font-weight: 400;
@@ -2406,10 +2467,10 @@ html {
 .contacts__form-btn::after {
   position: absolute;
   content: '';
-  top: -6px;
-  left: -8px;
-  width: 106%;
-  height: 125%;
+  top: -5px;
+  left: -5px;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
   border: 2px solid #C283F3;
   border-radius: 100px;
   transform: scaleX(0);
