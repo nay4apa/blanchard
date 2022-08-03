@@ -145,17 +145,18 @@
   .hero__titl {
     font-size: 68px;
     line-height: 98px;
+    letter-spacing: 2.5px;
+    margin-bottom: -1px;
   }
 
   .hero__text {
     margin-top: -10px;
-    margin-bottom: 156px;
+    margin-bottom: 155px;
   }
 
-  /* .about-us .container {
-        padding: 0 50px;
-        margin: 0 auto;
-    } */
+  .about-us__titl {
+    margin-bottom: 17px;
+  }
 
   .about-us__text {
     max-width: 925px;
@@ -208,7 +209,7 @@
   }
 
   .gallery {
-    padding-bottom: 74px;
+    padding-bottom: 76px;
     background-image: url(../img/gallery__bgImg1024px.jpg);
   }
 
@@ -216,8 +217,13 @@
     display: none;
   }
 
+  .catalog {
+    padding-top: 80px;
+  }
+
   .catalog__text {
     max-width: 925px;
+    margin-bottom: 38px;
   }
 
   .catalog__artist-list {
@@ -308,7 +314,7 @@
 
 
   .gallery__swiper-pagination {
-    bottom: 10px;
+    bottom: 8px;
     margin-left: -2px;
   }
 
@@ -415,18 +421,19 @@
   }
 
   .hero {
-    padding-top: 74px;
+    padding-top: 68px;
+    padding-bottom: 137px;
   }
 
   .hero__titl {
     font-size: 72px;
-    line-height: 94px;
+    line-height: 98px;
     letter-spacing: 0.1px;
-    margin-bottom: 2px;
+    margin-bottom: -3px;
   }
 
   .hero__text {
-    margin-bottom: 156px;
+    margin-bottom: 155px;
   }
 
   .slide-1 {
@@ -441,12 +448,24 @@
     background-image: url(../img/hero/hero__bg3-768.jpg);
   }
 
+  .about-us {
+    padding-bottom: 68px;
+  }
+
+  .gallery__left {
+    padding-top: 82px;
+  }
+
+  .gallery__titl {
+    margin-bottom: 14px;
+  }
+
   .catalog {
     padding-bottom: 66px;
   }
 
   .catalog__text {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
   .catalog__info {
@@ -480,7 +499,7 @@
   }
 
   .gallery__slider-navigation {
-    margin-bottom: 24px;
+    margin-bottom: 28px;
   }
 
   .catalog__hiden {
@@ -508,7 +527,7 @@
   }
 
   .contacts__place {
-    margin-bottom: 2px;
+    margin-bottom: 1px;
   }
 
   .contacts__form {
@@ -519,7 +538,7 @@
   .contacts__form-input {
     width: 320px;
     margin-right: 0;
-    margin-bottom: 10px;
+    margin-bottom: 11px;
   }
 
   .contacts__form-btn {
@@ -564,7 +583,7 @@
   }
 
   .choices {
-    margin-bottom: 38px;
+    margin-bottom: 40px;
   }
 
   .is-open .choices__list--dropdown {
@@ -594,6 +613,7 @@
 
   .events__container {
     padding-bottom: 80px;
+    margin-bottom: 38px;
   }
 
   .just-validate-error-label {
@@ -740,7 +760,7 @@
     width: 95%;
     padding-left: 15px;
     font-weight: 400;
-    margin-bottom: 50px;
+    margin-bottom: 52px;
     font-size: 12px;
     line-height: 16px;
   }
@@ -815,8 +835,9 @@
   }
 
   .about-us {
+    margin-left: -1px;
     padding-top: 50px;
-    padding-bottom: 40px;
+    padding-bottom: 41px;
   }
 
   .about-us__titl {
@@ -832,8 +853,8 @@
   }
 
   .gallery {
-    padding-top: 50px;
-    padding-bottom: 22px;
+    padding-top: 51px;
+    padding-bottom: 18px;
   }
 
   .gallery__left {
@@ -852,7 +873,7 @@
   }
 
   .gallery__select-name {
-    margin-bottom: 6px;
+    margin-bottom: 4px;
   }
 
   .catalog__hiden2 {
@@ -870,7 +891,7 @@
 
   .choices {
     min-width: 290px;
-    margin-bottom: 30px;
+    margin-bottom: 31px;
   }
 
   .gallery__slider {
@@ -907,8 +928,12 @@
     padding: 6px;
   }
 
+  .catalog__artist-name {
+    padding-top: 18px;
+  }
+
   .catalog__titl {
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     font-size: 28px;
     line-height: 38px;
   }
@@ -940,11 +965,12 @@
   }
 
   .catalog__artist-descr {
-    padding-top: 18px;
+    padding-top: 15px;
   }
 
   .events__container {
     padding-bottom: 42px;
+    margin-bottom: 40px;
   }
 
   .events__titl {
@@ -1006,7 +1032,7 @@
   }
 
   .projects__text {
-    margin-bottom: 50px;
+    margin-bottom: 51px;
     padding-right: 5.5px;
   }
 
@@ -1047,13 +1073,13 @@
 }
 
   .contacts__place-name {
-    margin-bottom: 6px;
+    margin-bottom: 4px;
     font-size: 18px;
     line-height: 25px;
   }
 
   .contacts__place-address {
-    margin-bottom: 18px;
+    margin-bottom: 19px;
   }
 
   .contacts__container {
@@ -1096,6 +1122,7 @@
   }
 
   .contacts__feedback-titl {
+    margin-bottom: 8px;
     font-size: 18px;
     line-height: 32px;
     letter-spacing: -0.5px;
