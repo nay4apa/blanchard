@@ -830,7 +830,7 @@ html {
 .hero {
   position: relative;
   padding-top: 60px;
-  padding-bottom: 145px;
+  padding-bottom: 146px;
   background-color: var(--black-light);
   z-index: 0;
 }
@@ -844,7 +844,7 @@ html {
   font-weight: 700;
   font-size: 68px;
   line-height: 97px;
-  letter-spacing: 3px;
+  letter-spacing: 2.5px;
   color: #FFFFFF;
 }
 
@@ -976,7 +976,7 @@ html {
 /* gallery */
 
 .gallery {
-  padding-bottom: 74px;
+  padding-bottom: 77px;
   background-image: url(../img/gallery__bgImg1920px.jpg);
   background-color: var(--black-light);
   background-repeat: no-repeat;
@@ -1463,7 +1463,7 @@ html {
 /* catalog */
 
 .catalog {
-  padding: 84px 0;
+  padding: 82px 0;
   padding-bottom: 80px;
 }
 
