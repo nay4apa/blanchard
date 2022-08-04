@@ -38,8 +38,12 @@
   .header__top {
     height: auto;
     padding: 0 0;
-    padding-top: 30px;
-    padding-bottom: 26px;
+    padding-top: 28px;
+    padding-bottom: 27px;
+  }
+
+  .header__logo-link {
+    padding-right: 5px;
   }
 
   .header__burger {
@@ -123,7 +127,7 @@
 
   .hero {
     padding-top: 68px;
-    padding-bottom: 136px;
+    padding-bottom: 137px;
   }
 
   .slide-1 {
@@ -145,8 +149,9 @@
   .hero__titl {
     font-size: 68px;
     line-height: 98px;
-    letter-spacing: 2.5px;
+    letter-spacing: 2.3px;
     margin-bottom: -1px;
+    padding-left: 2px;
   }
 
   .hero__text {
@@ -154,8 +159,13 @@
     margin-bottom: 155px;
   }
 
+  .about-us {
+    padding-top: 81px;
+    padding-bottom: 69px;
+  }
+
   .about-us__titl {
-    margin-bottom: 17px;
+    margin-bottom: 16px;
   }
 
   .about-us__text {
@@ -165,6 +175,10 @@
   .choices {
     width: 280px;
     margin-bottom: 106px;
+  }
+
+  .gallery__checkbox-label {
+    padding-left: 22px;
   }
 
   .graph-modal__container {
@@ -234,6 +248,12 @@
   .catalog__accordion {
     max-width: 50%;
     padding-left: 25px;
+    padding-top: 0;
+  }
+
+  .catalog__artist-name {
+    padding-top: 27px;
+    margin-bottom: 6px;
   }
 
   .catalog__artist-descr {
@@ -268,7 +288,7 @@
   }
 
   .projects__titl {
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
 
   .events__article-img {
@@ -318,8 +338,14 @@
 
 
   .gallery__swiper-pagination {
-    bottom: 8px;
-    margin-left: -2px;
+    bottom: 6px;
+    margin-right: 17px;
+    /* margin-left: -1px; */
+    /* padding-right: 4px; */
+  }
+
+  .gallery__swiper-button-prev {
+    margin-right: 20px;
   }
 
   .swiper-pagination-bullet {
@@ -607,7 +633,7 @@
   }
 
   .projects__text {
-    margin-bottom: 30px;
+    margin-bottom: 28px;
     padding-right: 6px;
   }
 
@@ -849,7 +875,7 @@
   .about-us {
     margin-left: -1px;
     padding-top: 50px;
-    padding-bottom: 41px;
+    padding-bottom: 40px;
   }
 
   .about-us__titl {
@@ -866,7 +892,7 @@
 
   .gallery {
     padding-top: 51px;
-    padding-bottom: 18px;
+    padding-bottom: 19px;
   }
 
   .gallery__left {
@@ -903,7 +929,7 @@
 
   .choices {
     min-width: 290px;
-    margin-bottom: 31px;
+    margin-bottom: 30px;
   }
 
   .gallery__slider {
@@ -945,7 +971,7 @@
   }
 
   .catalog__titl {
-    margin-bottom: 12px;
+    margin-bottom: 13px;
     font-size: 28px;
     line-height: 38px;
   }
@@ -977,7 +1003,7 @@
   }
 
   .catalog__artist-descr {
-    padding-top: 15px;
+    padding-top: 14px;
   }
 
   .events__container {

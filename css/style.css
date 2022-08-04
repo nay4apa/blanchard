@@ -207,6 +207,7 @@ html {
   right: 0;
   z-index: 8;
   padding: 26px 0;
+  padding-top: 27px;
   background: #000000;
 }
 
@@ -456,8 +457,8 @@ html {
 
 .header__bottom {
   width: 100%;
-  padding-top: 21px;
-  padding-bottom: 21px;
+  padding-top: 23px;
+  padding-bottom: 19px;
   position: absolute;
   z-index: 6;
   background: rgba(0, 0, 0, 0.5);
@@ -829,8 +830,8 @@ html {
 
 .hero {
   position: relative;
-  padding-top: 60px;
-  padding-bottom: 146px;
+  padding-top: 58px;
+  padding-bottom: 145px;
   background-color: var(--black-light);
   z-index: 0;
 }
@@ -843,15 +844,15 @@ html {
   font-style: normal;
   font-weight: 700;
   font-size: 68px;
-  line-height: 97px;
+  line-height: 99px;
   letter-spacing: 2.5px;
   color: #FFFFFF;
 }
 
 .hero__text {
   margin: 0;
-  margin-top: -2px;
-  margin-bottom: 114px;
+  margin-top: -4px;
+  margin-bottom: 115px;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -976,7 +977,7 @@ html {
 /* gallery */
 
 .gallery {
-  padding-bottom: 77px;
+  padding-bottom: 76px;
   background-image: url(../img/gallery__bgImg1920px.jpg);
   background-color: var(--black-light);
   background-repeat: no-repeat;
@@ -1019,7 +1020,7 @@ html {
 .choices {
   max-width: 400px;
   position: relative;
-  margin-bottom: 172px;
+  margin-bottom: 175px;
   background: transparent;
   transition: background 0.3s ease-in-out;
 }
@@ -1991,7 +1992,7 @@ html {
 
 .events__container {
   position: relative;
-  padding-bottom: 78px;
+  padding-bottom: 76px;
 }
 
 .events__titl {
