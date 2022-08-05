@@ -223,7 +223,7 @@
   }
 
   .gallery {
-    padding-bottom: 78px;
+    padding-bottom: 77px;
     background-image: url(../img/gallery__bgImg1024px.jpg);
   }
 
@@ -340,8 +340,13 @@
   .gallery__swiper-pagination {
     bottom: 6px;
     margin-right: 17px;
+    padding-top: 14px;
     /* margin-left: -1px; */
     /* padding-right: 4px; */
+  }
+
+  .gallery__slider-navigation {
+    margin-bottom: 29px;
   }
 
   .gallery__swiper-button-prev {
@@ -499,11 +504,11 @@
   }
 
   .catalog {
-    padding-bottom: 66px;
+    padding-bottom: 64px;
   }
 
   .catalog__text {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
   }
 
   .catalog__info {
@@ -651,7 +656,7 @@
 
   .events__container {
     padding-bottom: 80px;
-    margin-bottom: 38px;
+    margin-bottom: 40px;
   }
 
   .just-validate-error-label {
@@ -674,7 +679,7 @@
   }
 
   .events__article-info {
-    margin-bottom: 6px;
+    margin-bottom: 4px;
 
   }
 
@@ -1000,6 +1005,7 @@
 
   .accordion__content-wrap {
     padding: 20px 0;
+    padding-top: 21px;
   }
 
   .catalog__artist-descr {
@@ -1132,7 +1138,7 @@
   .contacts__form {
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
 
   .contacts__form-input {
