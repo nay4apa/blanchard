@@ -339,18 +339,18 @@
 
   .gallery__swiper-pagination {
     bottom: 6px;
-    margin-right: 17px;
-    padding-top: 14px;
+    margin-right: 20px;
+    padding-top: 12px;
     /* margin-left: -1px; */
     /* padding-right: 4px; */
   }
 
   .gallery__slider-navigation {
-    margin-bottom: 29px;
+    margin-bottom: 31px;
   }
 
   .gallery__swiper-button-prev {
-    margin-right: 20px;
+    margin-right: 19px;
   }
 
   .swiper-pagination-bullet {
@@ -541,8 +541,12 @@
     padding-bottom: 78px;
   }
 
+  .gallery__swiper-pagination {
+    padding-top: 10px;
+  }
+
   .gallery__slider-navigation {
-    margin-bottom: 28px;
+    margin-bottom: 30px;
   }
 
   .catalog__hiden {

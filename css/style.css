@@ -1237,7 +1237,7 @@ html {
 .gallery__slider-navigation {
   position: relative;
   display: inline-flex;
-  margin-bottom: 26px;
+  margin-bottom: 28px;
 }
 
 .gallery__swiper-button-next {
@@ -1252,7 +1252,7 @@ html {
 }
 
 .gallery__swiper-button-prev {
-  margin-right: 22px;
+  margin-right: 20px;
   transform: rotate(-90deg);
 }
 
@@ -1260,8 +1260,8 @@ html {
 
 .gallery__swiper-pagination {
   position: relative;
-  padding-top: 18px;
-  margin-right: 17px;
+  padding-top: 16px;
+  margin-right: 19px;
   color: white;
 }
 
